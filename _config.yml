@@ -4,6 +4,10 @@ plugins:
 title: Samira Korani
 logo: assets/img/logo.png
 show_downloads: False
-google_analytics:
-description: Computational Linguistics, Natural Language Processing, Machine Learning
+google_analytics: 
+description: bold;
+description: > 
+  Computational Linguistics
+  Natural Language Processing
+  Machine Learning
 
