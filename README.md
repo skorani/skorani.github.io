@@ -1,5 +1,5 @@
 
-[Industry](./another-page.html)&nbsp; &nbsp; &nbsp;[Publication](./another-page.html)&nbsp; &nbsp; &nbsp;[Activite](./another-page.html)&nbsp; &nbsp; &nbsp;   [Resource](./another-page.html)
+## [Industry](./another-page.html)&nbsp; &nbsp; &nbsp;## [Publication](./another-page.html)&nbsp; &nbsp; &nbsp;## [Activite](./another-page.html)&nbsp; &nbsp; &nbsp; ## [Resource](./another-page.html)
 
 
 
