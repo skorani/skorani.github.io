@@ -6,7 +6,4 @@ logo: assets/img/logo.png
 show_downloads: False
 google_analytics:
 description: Computational Linguistics, Natural Language Processing, Machine Learning
-url: http://skorani.github.io/ # the base hostname & protocol for your site
-baseurl: /logo.png
-
 
