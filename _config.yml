@@ -3,12 +3,11 @@ plugins:
 - jekyll-remote-theme 
 title: Samira Korani
 logo: assets/img/logo.png
-description: >
-  Computational Linguistics,
-  Natural Language Processing,
-  Machine Learning
+description: &description "Computational Linguistics, Natural Language Processing, Machine Learning" 
 show_downloads: False
 google_analytics: 
+twitter:
+  username : &twitter 
 
 
 
