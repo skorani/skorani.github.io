@@ -6,8 +6,16 @@ logo: assets/img/logo.png
 description: &description "Computational Linguistics, Natural Language Processing, Machine Learning" 
 show_downloads: False
 google_analytics: 
-twitter:
-  username : &twitter 
+links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+        url: "samira.korani@gmail.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+       url: "https://twitter.com/SamiraKorani"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+       url: "https://github.com/skorani"
 
 
 
