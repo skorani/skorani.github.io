@@ -16,12 +16,6 @@ email:
   title: 'Email'
   fa-icon: 'fa-envelope-square'
 
-facebook:
-  id: 'your-facebook-username'
-  href: 'https://www.facebook.com/'
-  title: 'Facebook'
-  fa-icon: 'fa-facebook-square'
-
 twitter:
   id: 'your-twitter-name'
   href: 'https://www.twitter.com/'
