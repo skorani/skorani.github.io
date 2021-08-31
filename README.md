@@ -1,5 +1,5 @@
 
-#### [Industrial Projects](./Industrial-Projects.html)&nbsp; &nbsp; &nbsp;[Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)
+#### [Industrial Projects](./Industrial-Projects.html)&nbsp; &nbsp; &nbsp;[Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp; [Conect](./Conect.html)
 
 &nbsp;
 &nbsp;
