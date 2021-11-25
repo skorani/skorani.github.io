@@ -12,12 +12,13 @@
 
 
 ## Contribution 
-- > [w3community] (https://www.w3.org/community/about/process/cla-deed/)
+- > [w3community](https://www.w3.org/community/about/process/cla-deed/)
 - > [NLPBT 2020, 2021 committee](https://sites.google.com/view/nlpbt-2021)
 - > Open-source community
-- > Part of the  NLPBT 2021 committee 
-- > Part of the  NLPBT 2020 committee
+- > [Part of the  NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
 - > Contribution in Women in Tech committee
 - > Contribute to the NTCIR15 project for Wikipedia’s data
+- > [developed an algorithm for token Persian formal text](https://github.com/skorani/tokenizer)
+
 
 
