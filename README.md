@@ -11,7 +11,9 @@
  
 &nbsp;
 &nbsp;
-
+ 
   
- [Linkdin](linkedin.com/in/samira-korani-056954143)&nbsp; &nbsp; [Twitter](https://twitter.com/SamiraKorani)
+ [Linkdin](linkedin.com/in/samira-korani-056954143)&nbsp; &nbsp;[Twitter](https://twitter.com/SamiraKorani) &nbsp;&nbsp;[Github](https://github.com/skorani)
+ 
+ 
 
