@@ -1,3 +1,6 @@
+
+I release some datasets for students:
+
 ## Tweets 
 
 
@@ -5,7 +8,7 @@
 
 
 ## News 
-- > [Persia NER dataset](https://github.com/OverFlowData/NER-)
+- > [Persian NER dataset](https://github.com/OverFlowData/NER-)
 
 
 ## Banking 
