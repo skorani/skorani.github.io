@@ -3,8 +3,7 @@ plugins:
 - jekyll-remote-theme 
 title: Samira Korani
 logo: assets/img/logo.png
-description: &description "Computational Linguistics, Natural Language Processing, Knowledge Graph, Machine Learning" 
-Email: Samira.korani@gmail.com ,s.korani1@nuigalway.ie
+description: &description "Computational Linguistics, Natural Language Processing, Knowledge Graph, Machine Learning" &Email "Samira.korani@gmail.com ,s.korani1@nuigalway.ie"
 show_downloads: False
 Google Analytics: 
 
