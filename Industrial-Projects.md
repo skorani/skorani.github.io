@@ -10,4 +10,4 @@ For instance, people on Instagram made a plan for leisure preferences; They foll
 
 
 ## AI assisstant as a Recommender System
-one of the popular use of 
+One of the popular application of AI is a question and answer system, Lately I was working on a q&s machine in insurance industry. In the first place, I used [HuggingFace](https://huggingface.co/transformers/usage.html) to extract question and answer as the dataset, the result was awful, so annoutated by human. I used [Rasa] (https://rasa.com/)for MVP, and for product I used [Keras](https://faroit.com/keras-docs/1.1.1/)
