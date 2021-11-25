@@ -1,3 +1,12 @@
+
+
+## Contribution 
+- > [w3community](https://www.w3.org/community/ontolex/spec/118/commitments)
+- > [Part of the  NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
+- > [Developed an algorithm for token Persian formal text](https://github.com/skorani/tokenizer)
+- > [ACL Member](https://www.aclweb.org/)
+
+
 ## Invited Talk
 - > NODES 2021, June 17, 2021, Topic: Link Prediction in Knowledge Graph using Neo4j.
 - > Systers Tech Talks, March 16, 2020, Topic: Using Machine Learning  for Information Extraction.
@@ -10,12 +19,6 @@
 
 
 
-
-## Contribution 
-- > [w3community](https://www.w3.org/community/ontolex/spec/118/commitments)
-- > [Part of the  NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
-- > [Developed an algorithm for token Persian formal text](https://github.com/skorani/tokenizer)
-- > [ACL Member](https://www.aclweb.org/)
 
 
 
