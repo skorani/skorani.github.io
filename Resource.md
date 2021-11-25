@@ -5,7 +5,7 @@
 
 
 ## News 
-- > Persia NER dataset(https://github.com/OverFlowData/NER-)
+- > [Persia NER dataset](https://github.com/OverFlowData/NER-)
 
 
 ## Banking 
