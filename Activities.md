@@ -12,10 +12,10 @@
 
 
 ## Contribution 
-- > [w3community](https://www.w3.org/community/about/process/cla-deed/)
-- > [NLPBT 2020, 2021 committee](https://sites.google.com/view/nlpbt-2021)
+- > [w3community](https://www.w3.org/community/ontolex/spec/118/commitments)
 - > [Part of the  NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
 - > [Developed an algorithm for token Persian formal text](https://github.com/skorani/tokenizer)
+- > [ACL Member](https://www.aclweb.org/)
 
 
 
