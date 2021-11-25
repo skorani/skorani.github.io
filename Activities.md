@@ -16,7 +16,7 @@
 - IrPython , March 7, 2018, Topic: Machine Learning, Open Source community, Tehran, Iran.
 - IrPython , January 30, 2018, Topic: Text mining, open-source community.
 
-## Interviews 
+**Interviews** 
 - [Breaking the mould: Samira Korani on promoting Artificial Intelligence & Tech in Iran](https://peopleofcolorintech.com/engineers/breaking-the-mould-samira-korani-on-promoting-artificial-intelligence-tech-in-iran/)
 
 
