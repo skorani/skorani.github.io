@@ -8,7 +8,7 @@
 
 
 ## Invited Talk
-- > NODES 2021, June 17, 2021, Topic: Link Prediction in Knowledge Graph using Neo4j.
+- > NODES 2021, June 17, 2021, Topic: Link Prediction in Knowledge Graph using [Neo4j](https://neo4j.brand.live/c/2021nodes-homepage).
 - > Systers Tech Talks, March 16, 2020, Topic: Using Machine Learning  for Information Extraction.
 - > VITA Event, July 18, 2019, Topic: Information Extract, National Library, Tehran, Iran.
 - > Elecomp, July 20, 2019, Topic: Amazon Assistant, The permanent location of Tehran Exhibitions, Iran.
