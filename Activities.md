@@ -3,7 +3,7 @@
 **Contribution** 
 - [w3community](https://www.w3.org/community/ontolex/spec/118/commitments)
 - [NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
-- [Develop an algorithm for token Persian formal text (Open Source)](https://github.com/skorani/tokenizer)
+- [Develop an algorithm for tokenize Persian formal text (Open Source)](https://github.com/skorani/tokenizer)
 - [SemEval-2022](https://www.aclweb.org/)
 
 
