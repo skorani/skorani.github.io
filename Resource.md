@@ -8,7 +8,7 @@
 &nbsp;
 &nbsp;
 
--[Persian Tweet Dataset](https://gitlab.com/skorani/persian_tweet)
+- [Persian Tweet Dataset](https://gitlab.com/skorani/persian_tweet)
 
 &nbsp;
 &nbsp;
