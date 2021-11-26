@@ -8,6 +8,7 @@
 
 
 **Invited Talk**
+- ICML 2021, Wed Jul 21, Topic: Application of Knowledge Graph in Industry, [Women in Machine Learning (WiML) Un-Workshop](https://icml.cc/Conferences/2021/ScheduleMultitrack?event=10849)
 - NODES 2021, June 17, 2021, Topic: Link Prediction in Knowledge Graph using [Neo4j](https://neo4j.brand.live/c/2021nodes-homepage).
 - [Systers Tech Talks](https://medium.com/wogrammer/systers-techtalk-speaker-spotlight-samira-korani-40e072a9eb12), March 16, 2020, Topic: Using Machine Learning  for Information Extraction.
 - VITA Event, July 18, 2019, Topic: Information Extract, National Library, Tehran, Iran.
