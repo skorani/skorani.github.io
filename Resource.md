@@ -1,3 +1,8 @@
+#### [Industrial Projects](./Industrial-Projects.html)&nbsp; &nbsp; &nbsp;[Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;
+
+&nbsp;
+&nbsp;
+
 
 **I released some datasets for students:**
 
