@@ -1,4 +1,7 @@
+#### [Industrial Projects](./Industrial-Projects.html)&nbsp; &nbsp; &nbsp;[Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;
 
+&nbsp;
+&nbsp;
 
 **Contribution** 
 - [w3community](https://www.w3.org/community/ontolex/participants)
