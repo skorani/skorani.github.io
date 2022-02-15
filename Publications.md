@@ -7,9 +7,12 @@ Actually as a First Year PhD studen who was in the industry for a long time, I d
 &nbsp;
 &nbsp;
 
-**Neural Relation Extraction**
-**Distributed Knowledge Graph**
-**Detect Hate Speech in social media**
+**Neural Relation Extraction**. 
+
+**Distributed Knowledge Graph**. 
+
+**Hate Speech Detection**. 
+
 
 
 
