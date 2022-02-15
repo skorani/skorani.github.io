@@ -2,34 +2,14 @@
 
 &nbsp;
 &nbsp;
-
-
+Actually as a First Year PhD studen who was in the industry for a long time, I do not have any published publication STILL. I just have many manuscripts. I am also working on the areas below:
 &nbsp;
 &nbsp;
 &nbsp;
 
-**Neural Relation Extraction approach to Construct Finance knowledge graph as an Event Detection System**
-
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
+**Neural Relation Extraction**
 **Distributed Knowledge Graph**
-
-&nbsp;
-&nbsp;
-&nbsp;
-
-**Detect Hate Speech in social media case study: twitter**
-
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
-### This page will be updated ASAP
+**Detect Hate Speech in social media**
 
 
 
