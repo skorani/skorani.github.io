@@ -3,7 +3,8 @@
 &nbsp;
 &nbsp;
 
-**Contribution** 
+**Contribution**
+- [SemEval](https://zenodo.org/communities/semeval/?page=1&size=20)
 - [w3community](https://www.w3.org/community/ontolex/participants)
 - [NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
 - [Develop an algorithm for tokenize Persian formal text (Open Source)](https://github.com/skorani/tokenizer)
