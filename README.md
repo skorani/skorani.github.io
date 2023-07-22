@@ -1,5 +1,5 @@
 
-####  [About Me](README.md); [Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;  &nbsp; [Teaching](./teaching.html)&nbsp;  &nbsp; [Blog](./blog.html)&nbsp; 
+####  [About Me](README.md) &nbsp;&nbsp;  [Publications](./Publications.html)&nbsp; &nbsp; &nbsp;[Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;  &nbsp; [Teaching](./teaching.html)&nbsp;  &nbsp; [Blog](./blog.html)&nbsp; 
 
 
 &nbsp;
