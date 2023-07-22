@@ -4,15 +4,12 @@
 &nbsp; 
 &nbsp; 
 &nbsp; 
-&nbsp; 
-&nbsp;
-&nbsp;
-&nbsp;
 
 
 **NUIG**
 &nbsp;
 &nbsp;
+
 - Knowledge Graph 
 - Programming Ι
 - Programming ΙΙ
