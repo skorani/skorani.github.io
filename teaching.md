@@ -3,18 +3,5 @@
 
 
 
-****
 
-
-**NUIG**
-- Knowledge Graph
-- Programming Ι
-- Programming ΙΙ
-
-
-
-
-
-
-****
 
