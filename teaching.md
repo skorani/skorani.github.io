@@ -6,10 +6,11 @@
 &nbsp; 
 
 
-**NUIG**
+
 &nbsp;
 &nbsp;
 
+**NUIG**
 - Knowledge Graph 
 - Programming Ι
 - Programming ΙΙ
