@@ -8,6 +8,9 @@
 - [w3community](https://www.w3.org/community/ontolex/participants)
 - [NLPBT 2020,2021 committee](https://sites.google.com/view/nlpbt-2020/organization)
 - [Develop an algorithm for tokenize Persian formal text (Open Source)](https://github.com/skorani/tokenizer)
+- [Pyladie](https://www.youtube.com/watch?v=wtejNLHYBNw)
+- [Node2020](https://www.youtube.com/watch?v=WPGzCa1qwxM)
+- [Women In DSI community](https://stsquared.github.io/about/events/2023/02/20/welcome-to-stsquared.html)
 
 
 **Invited Talk**
