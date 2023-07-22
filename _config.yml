@@ -2,7 +2,7 @@ remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme 
 title: Samira Korani
-logo: assets/img/logo.png
+logo: assets/img/logo.JPG
 description: &description " Natural Language Processing\n Knowledge Graph\n Machine Learning\n Email:s.korani1@nuigalway.ie\n &nbsp; &nbsp; &nbsp; Samira.Korani@insight-centre.org"
 show_downloads: False
 Google Analytics: 
