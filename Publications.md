@@ -5,7 +5,8 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 My Research area includes 
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 - >**Distant supervised Learning**.
 - NeurIPS 2022 ,WiML Workshop ,[Reduce False Negative in Distant supervised learning using Dependency tree-LSTM to Construct a  Knowledge Graph](https://sites.google.com/view/wiml2022/program) 
