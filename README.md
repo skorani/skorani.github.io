@@ -11,7 +11,7 @@
  
 &nbsp;
   
- [Linkdin](linkedin.com/in/samira-korani-056954143)&nbsp; &nbsp;[Twitter](https://twitter.com/SamiraKorani) &nbsp;&nbsp;[Github](https://github.com/skorani) &nbsp;&nbsp;[scholar](https://scholar.google.co.il/citations?hl=en&user=hQeZYWkAAAAJ)
+ [Linkdin](linkedin.com/in/samira-korani-056954143)&nbsp; &nbsp;[Twitter](https://twitter.com/SamiraKorani) &nbsp;&nbsp;[Github](https://github.com/skorani) 
  
  
 
