@@ -4,7 +4,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-My Research area includes 
+My Research area including:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
