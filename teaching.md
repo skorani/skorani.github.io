@@ -11,7 +11,7 @@
 &nbsp;
 
 
-- **NUIG**.
+- **NUIG**
 &nbsp;
 &nbsp;
 - Knowledge Graph 
