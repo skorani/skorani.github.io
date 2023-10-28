@@ -1,15 +1,16 @@
-remote_theme: pages-themes/minimal@v0.2.0
-  plugins:
-- jekyll-remote-theme
-title: Samira Korani
-logo: assets/img/logo.JPG
-description: |
-- Natural Language Processing
-- Knowledge Graph
-- Machine Learning
-- Email:s.korani1@nuigalway.ie
-- Samira.Korani@insight-centre.org
+remote_theme: "pages-themes/minimal@v0.2.0"
+plugins:
+  - jekyll-remote-theme
+title: "Samira Korani"
+logo: "assets/img/logo.JPG"
+description: >
+  - Natural Language Processing
+  - Knowledge Graph
+  - Machine Learning
+  - Email:s.korani1@nuigalway.ie
+  - Samira.Korani@insight-centre.org
 show_downloads: False
+# Google Analytics: UA-XXXXX-Y # Add your Google Analytics ID here
 
 
 
