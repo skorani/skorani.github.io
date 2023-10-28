@@ -1,5 +1,5 @@
-remote_theme: pages-themes/minimal@v0.2.0:
-plugins:
+remote_theme: pages-themes/minimal@v0.2.0
+  plugins:
 - jekyll-remote-theme
 title: Samira Korani
 logo: assets/img/logo.JPG
@@ -10,7 +10,6 @@ description: |
 - Email:s.korani1@nuigalway.ie
 - Samira.Korani@insight-centre.org
 show_downloads: False
-Google Analytics:
 
 
 
