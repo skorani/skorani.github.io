@@ -12,7 +12,7 @@ I have been working in the Computer Science field since 2013, specializing in na
 
 This quest took me on a journey through different cultures, places, music, cinema, dance and languages. It was a personal exploration that I believe everyone should experience to truly find themselves. Ultimately, my path led me to technology, where I found both my passion and purpose.
 
-Over the years, I have designed and developed several AI-based solutions, culminating in the founding of [Tripoh.ie](https://tripoh.ie) tripoh.ie, an AI-powered platform transforming travel experiences. 
+Over the years, I have designed and developed several AI-based solutions, culminating in the founding of [Tripoh.ie](https://tripoh.ie), an AI-powered platform transforming travel experiences. 
  
 &nbsp;
 &nbsp;
