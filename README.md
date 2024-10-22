@@ -8,7 +8,11 @@
 
  **About me**
  
-I have been working in the Computer Science field since 2013, working on natural language processing, and machine learning problems. Before choosing the computer science field for my career, as a young woman in an ideological country like Iran, my mind was full of philosophical questions. I tried to find myself and answer my primary enigma, "Living my life, my way." I started my journey among people, places, songs, movies, dances, sports, and languages. I need that journey, and I believe everybody needs the journey. Finally found my way into tech. I designed and developed many AI-based software, After a while, I have decided to get back to academia. I am doing PhD at NUIG.
+I have been working in the Computer Science field since 2013, specializing in natural language processing and machine learning. Before pursuing this career, growing up in Iran, a country shaped by deep ideologies, I was driven by philosophical questions, searching for the answer to my core question: "How do I live my life, my way?"
+
+This quest took me on a journey through different cultures, places, music, cinema, dance and languages. It was a personal exploration that I believe everyone should experience to truly find themselves. Ultimately, my path led me to technology, where I found both my passion and purpose.
+
+Over the years, I have designed and developed several AI-based solutions, culminating in the founding of tripoh.ie, an AI-powered platform transforming travel experiences. 
  
 &nbsp;
 &nbsp;
