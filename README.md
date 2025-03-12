@@ -15,5 +15,5 @@ Over the years, I have designed and developed several AI-based solutions, culmin
  
 &nbsp;
 &nbsp;
- [Linkdin](https://www.linkedin.com/in/samira-korani-056954143/)&nbsp; &nbsp;[Twitter](https://twitter.com/SamiraKorani) &nbsp;&nbsp;[Github](https://github.com/skorani) &nbsp;&nbsp;[scholar]
+ [Linkdin](https://www.linkedin.com/in/samira-korani-056954143/)&nbsp; &nbsp;[Twitter](https://twitter.com/SamiraKorani) &nbsp;&nbsp;[Github](https://github.com/skorani) 
 
