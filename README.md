@@ -6,12 +6,11 @@
 &nbsp;
 
  **About me**
- 
-make this a a bit better I have been working in the Computer Science field since 2013, specializing in natural language processing and machine learning. Before pursuing this career, growing up in Iran, a country shaped by deep ideologies, I was driven by philosophical questions, searching for the answer to my core question: "How do I live my life, my way?"
+ Since 2013, I have been immersed in the field of Computer Science, specializing in natural language processing and machine learning. Growing up in Iran, a country shaped by deep ideologies, I found myself drawn to profound philosophical questions—most notably, "How do I live my life, my way?"
 
-This quest took me on a journey through different cultures, places, music, cinema, dance and languages. It was a personal exploration that I believe everyone should experience to truly find themselves. Ultimately, my path led me to technology, where I found both my passion and purpose.
+This curiosity led me on a journey of self-discovery through diverse cultures, languages, music, cinema, and dance. It was an exploration that shaped my perspective and reinforced my belief that personal growth comes from embracing new experiences. Ultimately, my path led me to technology, where I found both passion and purpose.
 
-Over the years, I have designed and developed several AI-based solutions, culminating in the founding of [Tripoh.ie](https://tripoh.ie), an AI-powered platform transforming travel experiences. 
+Throughout my career, I have designed and developed several AI-driven solutions, culminating in the creation of Tripoh.ie, an AI-powered platform revolutionizing travel experiences.
  
 &nbsp;
 &nbsp;
