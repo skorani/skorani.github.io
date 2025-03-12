@@ -1,4 +1,4 @@
-[About Me](README.md) &nbsp;  [Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;  &nbsp; [Teaching](./teaching.html)&nbsp;  &nbsp; [Blog](./blog.html)
+####  [Activities](./Activities.html)&nbsp; &nbsp; &nbsp; [Resource](./Resource.html)&nbsp; &nbsp; &nbsp;  &nbsp; [Teaching](./teaching.html)&nbsp;  &nbsp; [Blog](https://medium.com/@tripoh)&nbsp; 
 
 
 &nbsp;
