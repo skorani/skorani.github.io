@@ -1,0 +1,39 @@
+{%- assign p = site.data.profile -%}
+<section class="contact inverse" id="contact" aria-labelledby="contact-title">
+  <div class="container contact__inner">
+    <div class="contact__intro">
+      <p class="eyebrow">Contact</p>
+      {%- if include.primary == "speaking" %}
+      <h2 id="contact-title">Invite me to speak or run a workshop</h2>
+      <p class="contact__lead">Tell me about the event or team, the audience and the date you have in mind. I'll reply to discuss the format and topic.</p>
+      <div class="actions">
+        <a class="button button--inverse" href="{% include mailto.html type="speaking" %}">Send a speaking enquiry</a>
+        <a class="button button--inverse-outline" href="{% include mailto.html type="health_check" %}">Discuss your project<span class="visually-hidden">: LLM Evaluation Health Check</span></a>
+      </div>
+      {%- else %}
+      <h2 id="contact-title">Tell me about your system</h2>
+      <p class="contact__lead">Send a few lines about what you're building and what's going wrong. I'll reply to arrange a short discovery call.</p>
+      <div class="actions">
+        <a class="button button--inverse" href="{% include mailto.html type="health_check" %}">Discuss your project<span class="visually-hidden">: LLM Evaluation Health Check</span></a>
+        <a class="button button--inverse-outline" href="{% include mailto.html type="speaking" %}">Speaking or workshop enquiry</a>
+      </div>
+      {%- endif %}
+      {%- if p.booking_url != "" %}
+      <p class="contact__booking"><a href="{{ p.booking_url | escape }}">Book a call in my calendar</a></p>
+      {%- endif %}
+    </div>
+    <div class="contact__direct">
+      <p class="contact__label">Email</p>
+      <p class="contact__email">{{ p.email }}</p>
+      <p class="contact__email-actions">
+        <a href="{% include mailto.html %}">Open in your email app</a>
+        <button type="button" class="copy-button" data-copy="{{ p.email }}" data-copy-status="copy-status" hidden>Copy address</button>
+      </p>
+      <p class="copy-status" id="copy-status" role="status"></p>
+      <ul class="contact__links" role="list">
+        <li><a href="{{ p.linkedin }}">LinkedIn</a></li>
+        <li><a href="{{ p.github }}">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

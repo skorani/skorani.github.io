@@ -1,0 +1,297 @@
+<!doctype html>
+<!--
+  Brand kit preview: the identity and the website components on one page.
+  Not published with the website. View it from the repository root:
+    python3 -m http.server 8001
+  then open http://localhost:8001/brand-kit/preview.html
+-->
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Samira Korani brand kit</title>
+  <link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <style>
+    .kit-section { padding-block: var(--space-8); border-top: 1px solid var(--color-border); }
+    .kit-section > .container > h2 { margin-bottom: var(--space-2); }
+    .kit-section > .container > .kit-intro { color: var(--color-text-muted); margin-bottom: var(--space-6); max-width: var(--width-prose); }
+    .kit-grid { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+    .kit-grid--wide { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+    .tile { border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface); }
+    .tile__art { display: grid; place-items: center; min-height: 9rem; padding: var(--space-5); }
+    .tile__art img { max-height: 5rem; width: auto; }
+    .tile__meta { padding: var(--space-3) var(--space-4); font-size: var(--text-sm); border-top: 1px solid var(--color-border); }
+    .tile__meta code, .kit code { font-family: var(--font-mono); font-size: 0.85em; }
+    .bg-ivory { background: var(--color-ivory); } .bg-white { background: var(--color-white); }
+    .bg-ink { background: var(--color-ink); } .bg-teal { background: var(--color-teal); }
+    .swatch { border-radius: var(--radius-lg); border: 1px solid var(--color-border); overflow: hidden; background: var(--color-surface); }
+    .swatch__chip { height: 5.5rem; }
+    .swatch__body { padding: var(--space-3) var(--space-4); font-size: var(--text-sm); }
+    .swatch__body strong { display: block; font-size: var(--text-base); }
+    .type-row { display: grid; gap: var(--space-2) var(--space-6); padding-block: var(--space-4); border-top: 1px solid var(--color-border); }
+    @media (min-width: 48em) { .type-row { grid-template-columns: 11rem 1fr; align-items: baseline; } }
+    .type-row code { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .favicons { display: flex; gap: var(--space-6); align-items: end; flex-wrap: wrap; }
+    .favicons figure { margin: 0; text-align: center; font-size: var(--text-sm); color: var(--color-text-muted); }
+    .favicons img { margin: 0 auto var(--space-2); image-rendering: pixelated; }
+    .demo-state { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); }
+    .is-hover.button { background: var(--color-action-hover); border-color: var(--color-action-hover); }
+    .is-hover.button--secondary { background: var(--color-surface-highlight); color: var(--color-action-hover); }
+    .is-focus { outline: var(--focus-width) solid var(--color-focus); outline-offset: var(--focus-offset); }
+    .inverse .is-focus { outline-color: var(--color-inverse-focus); }
+    .doc { background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); font-size: var(--text-sm); }
+    .doc__head { display: flex; justify-content: space-between; gap: var(--space-5); flex-wrap: wrap; padding-bottom: var(--space-4); border-bottom: 2px solid var(--color-teal); margin-bottom: var(--space-4); }
+    .doc__head img { height: 3rem; width: auto; }
+    .doc__meta { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-1) var(--space-4); margin: 0 0 var(--space-5); }
+    .doc__meta dt { color: var(--color-text-muted); }
+    .doc__foot { border-top: 1px solid var(--color-border); padding-top: var(--space-3); color: var(--color-text-muted); font-size: var(--text-xs); }
+    .ph { background: #FFF4CC; color: #5C4400; padding: 0 0.25em; border-radius: 3px; font-weight: 600; }
+    .sig { font-size: var(--text-sm); line-height: 1.5; }
+    .sig strong { font-size: var(--text-base); }
+    .banner { background: var(--color-teal-tint); border-radius: var(--radius-md); padding: var(--space-3) var(--space-4); font-size: var(--text-sm); margin-bottom: var(--space-5); }
+  </style>
+</head>
+<body class="kit">
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top">
+      <svg class="brand__symbol" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="9.75" y1="6" x2="9.75" y2="26"/><line x1="9.75" y1="16" x2="22.25" y2="6"/><line x1="9.75" y1="16" x2="22.25" y2="26"/></g><g fill="currentColor"><circle cx="9.75" cy="6" r="3"/><circle cx="9.75" cy="26" r="3"/><circle cx="22.25" cy="6" r="3"/><circle cx="22.25" cy="26" r="3"/><circle cx="9.75" cy="16" r="3.6"/></g></svg>
+      <span class="brand__text"><span class="brand__name">Samira Korani</span><span class="brand__descriptor">Knowledge Graphs · GraphRAG · LLM Evaluation</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Brand kit sections">
+      <ul role="list">
+        <li><a href="#logo">Logo</a></li><li><a href="#colour">Colour</a></li><li><a href="#type">Type</a></li>
+        <li><a href="#components">Components</a></li><li><a href="#documents">Documents</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="page-intro">
+    <div class="container">
+      <p class="eyebrow">Brand kit · version 1.0 · proposed identity</p>
+      <h1>Samira Korani</h1>
+      <p class="lead">Knowledge Graphs · GraphRAG · LLM Evaluation. A precise, approachable practitioner identity. Rules and rationale are in <code>brand-guidelines.md</code>; tokens in <code>tokens.css</code>.</p>
+    </div>
+  </section>
+
+  <!-- Logo -->
+  <section class="kit-section" id="logo">
+    <div class="container">
+      <h2>Logo</h2>
+      <p class="kit-intro">The symbol is the letter K drawn as a small graph: a hub node with three relationships. Use the light variants on ivory or white, dark-background variants on deep ink or teal, and mono variants for single-colour use.</p>
+      <div class="kit-grid kit-grid--wide">
+        <figure class="tile"><div class="tile__art bg-ivory"><img src="logo/lockup-light.svg" alt="Lockup, light background"></div><figcaption class="tile__meta"><code>lockup-light.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-ink"><img src="logo/lockup-dark-bg.svg" alt="Lockup, dark background"></div><figcaption class="tile__meta"><code>lockup-dark-bg.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-white"><img src="logo/wordmark-descriptor-light.svg" alt="Wordmark with descriptor"></div><figcaption class="tile__meta"><code>wordmark-descriptor-light.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-teal"><img src="logo/wordmark-descriptor-dark-bg.svg" alt="Wordmark with descriptor, on teal"></div><figcaption class="tile__meta"><code>wordmark-descriptor-dark-bg.svg</code> on teal</figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-white"><img src="logo/wordmark-name-light.svg" alt="Name-only wordmark"></div><figcaption class="tile__meta"><code>wordmark-name-light.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-white"><img src="logo/lockup-mono-ink.svg" alt="Monochrome lockup"></div><figcaption class="tile__meta"><code>lockup-mono-ink.svg</code></figcaption></figure>
+      </div>
+      <h3 class="subsection-title">Symbol</h3>
+      <div class="kit-grid">
+        <figure class="tile"><div class="tile__art bg-ivory"><img src="logo/symbol-light.svg" alt="Symbol, light" width="80" height="80"></div><figcaption class="tile__meta"><code>symbol-light.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-ink"><img src="logo/symbol-dark-bg.svg" alt="Symbol, dark background" width="80" height="80"></div><figcaption class="tile__meta"><code>symbol-dark-bg.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-white"><img src="logo/symbol-mono-ink.svg" alt="Symbol, mono" width="80" height="80"></div><figcaption class="tile__meta"><code>symbol-mono-ink.svg</code></figcaption></figure>
+        <figure class="tile"><div class="tile__art bg-white"><img src="logo/symbol-tile.svg" alt="Symbol tile" width="80" height="80"></div><figcaption class="tile__meta"><code>symbol-tile.svg</code></figcaption></figure>
+      </div>
+      <h3 class="subsection-title">Favicon at actual size</h3>
+      <div class="favicons">
+        <figure><img src="logo/favicon-16.png" width="16" height="16" alt="16 pixel favicon">16 px</figure>
+        <figure><img src="logo/favicon-32.png" width="32" height="32" alt="32 pixel favicon">32 px</figure>
+        <figure><img src="logo/favicon-48.png" width="48" height="48" alt="48 pixel favicon">48 px</figure>
+        <figure><img src="logo/apple-touch-icon.png" width="90" height="90" alt="Apple touch icon">180 px (shown at 90)</figure>
+        <figure><img src="logo/favicon-16.png" width="64" height="64" alt="16 pixel favicon enlarged">16 px, enlarged 4×</figure>
+      </div>
+      <h3 class="subsection-title">Social sharing image (1200 × 630)</h3>
+      <img src="social/og-image.png" width="1200" height="630" alt="Social image: Samira Korani, Knowledge Graphs · GraphRAG · LLM Evaluation" style="border:1px solid var(--color-border);border-radius:var(--radius-lg)">
+    </div>
+  </section>
+
+  <!-- Colour -->
+  <section class="kit-section" id="colour">
+    <div class="container">
+      <h2>Colour</h2>
+      <p class="kit-intro">Six core colours and two derived states. Pale sage is decorative only on light backgrounds (1.24:1). Never use teal on deep ink (2.06:1).</p>
+      <div class="kit-grid">
+        <div class="swatch"><div class="swatch__chip" style="background:#F7F5EF"></div><div class="swatch__body"><strong>Warm ivory</strong>#F7F5EF · main background<br>Ink on it 14.49:1</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF"></div><div class="swatch__body"><strong>White</strong>#FFFFFF · reading surfaces<br>Ink on it 15.80:1</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#14252B"></div><div class="swatch__body"><strong>Deep ink</strong>#14252B · primary text, inverse sections</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#075E54"></div><div class="swatch__body"><strong>Deep teal</strong>#075E54 · buttons, links, focus<br>On ivory 7.03:1 · white on it 7.67:1</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#52646A"></div><div class="swatch__body"><strong>Slate</strong>#52646A · secondary text<br>On ivory 5.68:1 · on white 6.20:1</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#D8DFDA"></div><div class="swatch__body"><strong>Pale sage</strong>#D8DFDA · borders, decoration<br>On deep ink 11.65:1 (text OK there)</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#04463F"></div><div class="swatch__body"><strong>Teal strong</strong>#04463F · hover, pressed<br>White on it 10.75:1</div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E7EFEC"></div><div class="swatch__body"><strong>Teal tint</strong>#E7EFEC · highlighted panels<br>Teal on it 6.56:1 · slate 5.30:1</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Type -->
+  <section class="kit-section" id="type">
+    <div class="container">
+      <h2>Typography</h2>
+      <p class="kit-intro">IBM Plex Sans, self-hosted (one 39 KB variable file), with system fallbacks. Regular 400, Medium 500, SemiBold 600.</p>
+      <div class="type-row"><code>--text-3xl · h1</code><span style="font-size:var(--text-3xl);font-weight:600;letter-spacing:var(--tracking-tight);line-height:1.1">Find out where your AI system fails</span></div>
+      <div class="type-row"><code>--text-2xl · h2</code><span style="font-size:var(--text-2xl);font-weight:600;letter-spacing:var(--tracking-tight)">How an engagement works</span></div>
+      <div class="type-row"><code>--text-xl · h3</code><span style="font-size:var(--text-xl);font-weight:600">Other ways I can help</span></div>
+      <div class="type-row"><code>--text-lg · lead</code><span style="font-size:var(--text-lg)">I help engineering teams evaluate RAG and agent systems.</span></div>
+      <div class="type-row"><code>--text-base · body</code><span>Fifty well-chosen cases can expose systematic failures, but they are a sample.</span></div>
+      <div class="type-row"><code>--text-sm · meta</code><span style="font-size:var(--text-sm);color:var(--color-text-muted)">After access and scope are agreed</span></div>
+      <div class="type-row"><code>--text-xs · label</code><span class="eyebrow" style="margin:0">Featured offer</span></div>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="kit-section" id="components">
+    <div class="container">
+      <h2>Website components</h2>
+      <p class="kit-intro">The same classes and tokens the website uses (<code>assets/css/site.css</code>). Hover and focus are shown as static states.</p>
+
+      <h3 class="subsection-title">Buttons and links</h3>
+      <div class="kit-grid">
+        <div><a class="button" href="#components">Discuss your project</a><p class="demo-state">Primary · default</p></div>
+        <div><a class="button is-hover" href="#components">Discuss your project</a><p class="demo-state">Primary · hover</p></div>
+        <div><a class="button is-focus" href="#components">Discuss your project</a><p class="demo-state">Primary · keyboard focus</p></div>
+        <div><a class="button button--secondary" href="#components">See the Health Check</a><p class="demo-state">Secondary · default</p></div>
+        <div><a class="button button--secondary is-hover" href="#components">See the Health Check</a><p class="demo-state">Secondary · hover</p></div>
+        <div><p><a href="#components">An underlined text link</a> and an <a class="arrow-link" href="#components">arrow link</a></p><p class="demo-state">Links are always underlined</p></div>
+      </div>
+
+      <h3 class="subsection-title">Featured offer and cards</h3>
+      <div class="cards cards--2">
+        <div class="hero__offer">
+          <p class="eyebrow">Featured offer</p>
+          <p class="hero__offer-title" style="font-weight:600">LLM Evaluation Health Check</p>
+          <dl class="facts facts--compact">
+            <div><dt>Fee</dt><dd>EUR 2,950 <span class="facts__note">Fixed project fee</span></dd></div>
+            <div><dt>Time</dt><dd>About 5 working days <span class="facts__note">After access and scope are agreed</span></dd></div>
+            <div><dt>Scope</dt><dd>One RAG or agent workflow, up to 50 test cases</dd></div>
+          </dl>
+          <a class="arrow-link" href="#components">What's included</a>
+        </div>
+        <article class="card highlight">
+          <p class="card__kind">NODES 2025 (Neo4j) · 6 November 2025</p>
+          <p class="card__title" style="font-weight:600">Building Contextual Knowledge Graphs to Adapt, Evaluate, and Leverage LLMs</p>
+          <p>Evidence cards link to the public source rather than describing it.</p>
+          <ul class="tags" role="list"><li>Neo4j</li><li>Knowledge graphs</li><li>LLM evaluation</li></ul>
+          <ul class="card__links" role="list"><li><a href="#components">Watch the session</a></li></ul>
+        </article>
+      </div>
+
+      <h3 class="subsection-title">Lists, steps and notes</h3>
+      <div class="split">
+        <ul class="checklist" role="list">
+          <li>Agreed evaluation cases (up to 50), written with your team</li>
+          <li>Baseline results across the agreed measures</li>
+          <li>Prioritised fixes, ordered by likely impact and effort</li>
+        </ul>
+        <p class="note"><strong>Limits.</strong> The results describe how the workflow behaved on the agreed cases; they are not a statistical guarantee.</p>
+      </div>
+      <ol class="steps" role="list" style="margin-top:var(--space-6)">
+        <li><span class="steps__num" aria-hidden="true">1</span><p class="steps__title" style="font-weight:600">Discovery</p><p>A short call about your system.</p></li>
+        <li><span class="steps__num" aria-hidden="true">2</span><p class="steps__title" style="font-weight:600">Agreed scope</p><p>A written scope and fixed-fee quotation.</p></li>
+        <li><span class="steps__num" aria-hidden="true">3</span><p class="steps__title" style="font-weight:600">Assessment</p><p>Evaluation cases, baseline, failure analysis.</p></li>
+        <li><span class="steps__num" aria-hidden="true">4</span><p class="steps__title" style="font-weight:600">Handover</p><p>A 60-minute session with your team.</p></li>
+      </ol>
+
+      <h3 class="subsection-title">FAQ</h3>
+      <div class="faq">
+        <details open><summary>Are 50 test cases enough?</summary><p>Enough to find systematic failures and decide what to fix first. Not enough for statistical claims.</p></details>
+        <details><summary>Who do we contract with?</summary><p>Engagements are contracted with and invoiced by MILEAWAY AI SYSTEMS LIMITED.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact inverse" aria-label="Inverse section example">
+    <div class="container contact__inner">
+      <div>
+        <p class="eyebrow">Inverse section</p>
+        <p style="font-size:var(--text-2xl);font-weight:600;line-height:1.15;margin-bottom:var(--space-4)">Tell me about your system</p>
+        <p class="contact__lead">Deep ink background, ivory text, pale sage for secondary text. Never teal here.</p>
+        <div class="actions">
+          <a class="button button--inverse" href="#components">Discuss your project</a>
+          <a class="button button--inverse-outline is-focus" href="#components">Speaking or workshop enquiry</a>
+        </div>
+        <p class="demo-state" style="color:var(--color-inverse-muted)">Second button shows the ivory focus ring</p>
+      </div>
+      <div class="contact__direct">
+        <p class="contact__label">Email</p>
+        <p class="contact__email">samira.korani@gmail.com</p>
+        <ul class="contact__links" role="list"><li><a href="#components">LinkedIn</a></li><li><a href="#components">GitHub</a></li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section class="kit-section" id="documents">
+    <div class="container">
+      <h2>Name and company in practice</h2>
+      <p class="kit-intro">Samira Korani is the public identity; MILEAWAY AI SYSTEMS LIMITED is the service provider named in commercial documents. Highlighted text marks placeholders. Never publish them.</p>
+      <p class="banner">Template only. Replace every <span class="ph">[PLACEHOLDER]</span> with confirmed details before use.</p>
+
+      <div class="kit-grid kit-grid--wide">
+        <div>
+          <h3 class="subsection-title" style="margin-top:0">Email signature</h3>
+          <div class="doc sig">
+            <img src="logo/symbol-light.svg" alt="" width="28" height="28" style="margin-bottom:var(--space-2)">
+            <strong>Samira Korani</strong><br>
+            <span class="muted">Knowledge Graphs · GraphRAG · LLM Evaluation</span><br>
+            <a href="#documents">samira.korani@gmail.com</a> · <a href="#documents">skorani.github.io</a><br>
+            <a href="#documents">LinkedIn</a> · <a href="#documents">GitHub</a>
+            <hr style="border:0;border-top:1px solid var(--color-border);margin:var(--space-3) 0">
+            <span class="muted" style="font-size:var(--text-xs)">Consulting services are provided by MILEAWAY AI SYSTEMS LIMITED. Registered in <span class="ph">[PLACE]</span>, company number <span class="ph">[CRO NUMBER]</span>. Registered office: <span class="ph">[ADDRESS]</span>. VAT number: <span class="ph">[ONLY IF REGISTERED]</span></span>
+          </div>
+        </div>
+        <div>
+          <h3 class="subsection-title" style="margin-top:0">Website footer (live data)</h3>
+          <div class="doc">
+            <p class="site-footer__name" style="margin:0">Samira Korani</p>
+            <p class="muted">samira.korani@gmail.com · LinkedIn · GitHub</p>
+            <p class="muted" style="margin:0">Consulting services are provided by MILEAWAY AI SYSTEMS LIMITED.<br>Registered particulars appear here once set in <code>_data/company.yml</code>; empty values are omitted.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Quotation header and footer</h3>
+      <div class="doc">
+        <div class="doc__head">
+          <img src="logo/lockup-light.svg" alt="Samira Korani, Knowledge Graphs · GraphRAG · LLM Evaluation">
+          <div style="text-align:right">
+            <p style="font-size:var(--text-lg);font-weight:600;margin:0">Quotation <span class="ph">[Q-YYYY-NNN]</span></p>
+            <p class="muted" style="margin:0">Date <span class="ph">[DD Month YYYY]</span> · Valid until <span class="ph">[DD Month YYYY]</span></p>
+          </div>
+        </div>
+        <dl class="doc__meta">
+          <dt>Prepared for</dt><dd><span class="ph">[Client company]</span>, attention <span class="ph">[Client contact]</span></dd>
+          <dt>Consultant</dt><dd>Samira Korani · samira.korani@gmail.com</dd>
+          <dt>Service provider</dt><dd>MILEAWAY AI SYSTEMS LIMITED</dd>
+          <dt>Engagement</dt><dd>LLM Evaluation Health Check</dd>
+          <dt>Fee</dt><dd>EUR 2,950, fixed for the agreed scope</dd>
+          <dt>VAT</dt><dd><span class="ph">[Rate, or "not applicable"]</span></dd>
+          <dt>Third-party costs</dt><dd><span class="ph">[e.g. model API usage, how it is charged]</span></dd>
+        </dl>
+        <p class="muted">… scope, deliverables, assumptions and limits …</p>
+        <div class="doc__foot">
+          MILEAWAY AI SYSTEMS LIMITED · Registered in <span class="ph">[PLACE]</span> · Company number <span class="ph">[CRO NUMBER]</span> · Registered office: <span class="ph">[ADDRESS]</span> · VAT number: <span class="ph">[ONLY IF REGISTERED]</span><br>
+          Consultant: Samira Korani · samira.korani@gmail.com <span style="float:right">Page 1 of <span class="ph">[Y]</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__id">
+      <p class="site-footer__name">Samira Korani</p>
+      <p>Brand kit v1.0 · proposed identity, no trademark clearance carried out</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

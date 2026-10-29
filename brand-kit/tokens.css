@@ -1,0 +1,117 @@
+/*
+ * Samira Korani: design tokens
+ * Single source of truth for the website and the brand kit.
+ * The website loads this file before assets/css/site.css.
+ * Contrast ratios are listed in brand-kit/brand-guidelines.md.
+ */
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/ibm-plex-sans-latin-var.woff2") format("woff2");
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---- Palette ---------------------------------------------------- */
+  --color-ivory: #F7F5EF;        /* main background */
+  --color-white: #FFFFFF;        /* reading surfaces */
+  --color-ink: #14252B;          /* primary text */
+  --color-teal: #075E54;         /* primary buttons and links */
+  --color-slate: #52646A;        /* secondary text */
+  --color-sage: #D8DFDA;         /* borders and decoration (never text on light) */
+
+  /* Derived (checked for contrast, see guidelines) */
+  --color-teal-strong: #04463F;  /* hover and pressed states */
+  --color-teal-tint: #E7EFEC;    /* highlighted panels, secondary hover */
+
+  /* ---- Roles: light surfaces --------------------------------------- */
+  --color-bg: var(--color-ivory);
+  --color-surface: var(--color-white);
+  --color-surface-highlight: var(--color-teal-tint);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-slate);
+  --color-link: var(--color-teal);
+  --color-link-hover: var(--color-teal-strong);
+  --color-action: var(--color-teal);
+  --color-action-hover: var(--color-teal-strong);
+  --color-on-action: var(--color-white);
+  --color-border: var(--color-sage);          /* decorative dividers only */
+  --color-border-control: var(--color-teal);  /* boundaries people must see */
+  --color-focus: var(--color-teal);
+
+  /* ---- Roles: inverse (deep ink) surfaces --------------------------- */
+  --color-inverse-bg: var(--color-ink);
+  --color-inverse-text: var(--color-ivory);
+  --color-inverse-muted: var(--color-sage);
+  --color-inverse-action: var(--color-ivory);
+  --color-inverse-on-action: var(--color-ink);
+  --color-inverse-focus: var(--color-ivory);
+
+  /* ---- Typography --------------------------------------------------- */
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas,
+    "Liberation Mono", monospace;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Type scale (1.2 ratio around a 17px body) */
+  --text-xs: 0.8125rem;   /* 13px  labels, legal lines */
+  --text-sm: 0.9375rem;   /* 15px  meta, captions */
+  --text-base: 1.0625rem; /* 17px  body */
+  --text-lg: 1.25rem;     /* 20px  lead paragraphs, card titles */
+  --text-xl: 1.5rem;      /* 24px  h3 */
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);  /* h2 */
+  --text-3xl: clamp(2.125rem, 1.5rem + 2.8vw, 3.375rem); /* h1 */
+
+  --leading-tight: 1.12;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+
+  --tracking-tight: -0.015em;
+  --tracking-label: 0.08em;
+
+  /* ---- Spacing (4px base) ------------------------------------------ */
+  --space-1: 0.25rem;  /* 4  */
+  --space-2: 0.5rem;   /* 8  */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+
+  --section-space: clamp(var(--space-7), 6vw, var(--space-9));
+
+  /* ---- Layout -------------------------------------------------------- */
+  --width-prose: 42rem;    /* comfortable reading line */
+  --width-content: 72rem;  /* page container */
+  --gutter: clamp(1rem, 4vw, 2.5rem); /* 16px at phone width */
+
+  /* ---- Shape ---------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --border-width: 1px;
+  --rule-accent: 3px;       /* teal top rule on featured panels */
+
+  /* ---- Interaction ---------------------------------------------------- */
+  --focus-width: 3px;
+  --focus-offset: 2px;
+  --target-min: 44px;       /* minimum touch target */
+  --duration: 140ms;
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+
+  --shadow-card: 0 1px 2px rgba(20, 37, 43, 0.06), 0 2px 8px rgba(20, 37, 43, 0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration: 0ms;
+  }
+}

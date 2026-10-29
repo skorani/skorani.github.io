@@ -1,0 +1,66 @@
+{%- comment -%}
+  Full description of one service from _data/services.yml.
+  Params: service (required), heading (h2|h3), label (optional eyebrow text).
+{%- endcomment -%}
+{%- assign s = include.service -%}
+{%- if include.heading == "h2" -%}{% assign h = "h2" %}{% assign sub = "h3" %}{%- else -%}{% assign h = "h3" %}{% assign sub = "h4" %}{%- endif -%}
+<article class="offer" id="{{ s.id }}" aria-labelledby="{{ s.id }}-title">
+  <div class="offer__main">
+    {%- if include.label %}
+    <p class="eyebrow">{{ include.label }}</p>
+    {%- endif %}
+    <{{ h }} class="offer__title" id="{{ s.id }}-title">{{ s.name }}</{{ h }}>
+    <p class="offer__tagline">{{ s.tagline }}</p>
+
+    <{{ sub }} class="offer__subhead">Who it's for</{{ sub }}>
+    <p>{{ s.for }}</p>
+
+    <{{ sub }} class="offer__subhead">The problem</{{ sub }}>
+    <p>{{ s.problem }}</p>
+
+    {%- if s.assess %}
+    <{{ sub }} class="offer__subhead">What I assess</{{ sub }}>
+    <ul class="checklist" role="list">
+      {%- for item in s.assess %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+
+    <{{ sub }} class="offer__subhead">What you get</{{ sub }}>
+    <ul class="checklist" role="list">
+      {%- for item in s.deliverables %}
+      <li>{{ item }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+
+  <div class="offer__side">
+    <dl class="facts">
+      <div>
+        <dt>Fee</dt>
+        <dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd>
+      </div>
+      <div>
+        <dt>Time</dt>
+        <dd>{{ s.duration }} <span class="facts__note">{{ s.duration_note }}</span></dd>
+      </div>
+      <div>
+        <dt>Scope</dt>
+        <dd>
+          <ul role="list">
+            {%- for item in s.scope %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+    {%- if s.limits %}
+    <p class="note"><strong>Limits.</strong> {{ s.limits }}</p>
+    {%- endif %}
+    <{{ sub }} class="offer__subhead">Next step</{{ sub }}>
+    <p>{{ s.next_step }}</p>
+    <a class="button" href="{% include mailto.html type=s.enquiry %}">Discuss your project<span class="visually-hidden">: {{ s.name }}</span></a>
+  </div>
+</article>

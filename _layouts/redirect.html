@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>Moved | {{ site.data.profile.name }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <style>body{font:1.0625rem/1.6 system-ui,sans-serif;color:#14252B;background:#F7F5EF;margin:0;padding:2rem 1rem}a{color:#075E54}</style>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ page.redirect_to | relative_url }}">{{ page.redirect_to | absolute_url }}</a>.</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# "How an engagement works" steps, shown on the homepage and services page.
+
+- title: Discovery
+  text: >-
+    A short call about your system, what's going wrong and what a useful
+    result would look like. If the work isn't a good fit, I'll say so.
+- title: Agreed scope
+  text: >-
+    A written scope and fixed-fee quotation covering the workflow, the
+    environment, the test cases, access and timing.
+- title: Assessment
+  text: >-
+    Once access is in place, I build the evaluation cases with your team, run
+    the baseline and analyse the failures.
+- title: Handover
+  text: >-
+    A 60-minute session to walk through the results and priorities. You keep
+    the evaluation cases and the report.

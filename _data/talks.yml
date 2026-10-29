@@ -1,0 +1,89 @@
+# Speaking and community. Only list things with a public source.
+
+featured_talk:
+  title: Building Contextual Knowledge Graphs to Adapt, Evaluate, and Leverage LLMs
+  event: NODES 2025 (Neo4j)
+  date: 2025-11-06
+  summary: >-
+    How I combined Geonames, OpenStreetMap, Yelp and Wikidata into contextual
+    knowledge graphs that give LLMs real-world context, and used them to adapt
+    and evaluate model output. The session was live-streamed from NODES 2025.
+  url: https://www.youtube.com/watch?v=CNtyCgTDGDM
+  link_label: Watch the session on YouTube
+  event_url: https://neo4j.com/nodes-2025/
+
+recognition:
+  title: Neo4j Featured Community Member
+  source: This Week in Neo4j
+  date: 2025-11-08
+  summary: >-
+    Featured in Neo4j's weekly community round-up, which also highlighted my
+    NODES 2025 session.
+  url: https://neo4j.com/blog/twin4j/this-week-in-neo4j-nodes-retriever-graph-analytics-agents-and-more/
+  link_label: Read the feature on neo4j.com
+
+# Proposed talk and workshop topics (review before publishing widely).
+topics:
+  - title: Finding where your RAG system fails
+    text: Building evaluation cases from real usage, checking groundedness, and turning failures into a prioritised fix list.
+  - title: Graph, vector or hybrid?
+    text: A practical way to decide when GraphRAG earns its complexity, and when better chunking or metadata would do more.
+  - title: Contextual knowledge graphs for grounding LLMs
+    text: Combining open datasets into a graph that gives models real-world context, building on my NODES 2025 session.
+  - title: Observability for LLM applications
+    text: Tracing, latency and cost, and catching regressions before users do.
+
+workshops:
+  - title: LLM evaluation for engineering teams
+    text: A hands-on session in Python on building a small evaluation set and harness for a sample RAG application.
+  - title: Knowledge graphs and GraphRAG with Neo4j
+    text: A practical introduction to modelling, loading and querying a graph for retrieval.
+
+# Earlier talks, newest first. `url` is optional.
+archive:
+  - date: 2022-07-19
+    event: PyLadies Dublin meetup
+    title: Encouraging teenage girls into programming
+    url: https://www.youtube.com/watch?v=wtejNLHYBNw&t=463s
+    link_label: Watch on YouTube
+  - date: 2021-07-21
+    event: ICML 2021, Women in Machine Learning (WiML) Un-Workshop
+    title: Application of Knowledge Graph in Industry
+    url: https://icml.cc/virtual/2021/affinity-workshop/10849
+    link_label: Programme on icml.cc
+  - date: 2021-06-17
+    event: NODES 2021 (Neo4j)
+    title: Link Prediction in Knowledge Graphs using Neo4j
+    url: https://www.youtube.com/watch?v=WPGzCa1qwxM
+    link_label: Watch on YouTube
+  - date: 2020-03-16
+    event: Systers Tech Talks
+    title: Using Machine Learning for Information Extraction
+    url: https://medium.com/wogrammer/systers-techtalk-speaker-spotlight-samira-korani-40e072a9eb12
+    link_label: Speaker spotlight on Medium
+  - date: 2019-07-20
+    event: Elecomp, Tehran
+    title: Amazon Assistant
+  - date: 2019-07-18
+    event: VITA event, National Library, Tehran
+    title: Information extraction
+  - date: 2018-06-05
+    event: IEEE Branch, Al-Zahra University, Tehran
+    title: Tweet mining
+  - date: 2018-03-07
+    event: IrPython open-source community
+    title: Machine learning
+  - date: 2018-01-30
+    event: IrPython open-source community
+    title: Text mining
+
+community:
+  - text: NLPBT 2020 and 2021 organising committee
+    url: https://sites.google.com/view/nlpbt-2020/organization
+  - text: Participant, W3C Ontology-Lexica (OntoLex) Community Group
+    url: https://www.w3.org/community/ontolex/participants
+
+interviews:
+  - title: "Breaking the mould: Samira Korani on promoting Artificial Intelligence & Tech in Iran"
+    source: People of Color in Tech
+    url: https://peopleofcolorintech.com/engineers/breaking-the-mould-samira-korani-on-promoting-artificial-intelligence-tech-in-iran/

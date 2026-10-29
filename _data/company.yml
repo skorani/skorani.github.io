@@ -1,0 +1,13 @@
+# The company that provides and invoices the consulting services.
+# These are the only place the footer particulars come from.
+#
+# Leave a value as "" to keep it off the website. Never put placeholder text
+# here: whatever you type is published exactly as written.
+
+legal_name: MILEAWAY AI SYSTEMS LIMITED
+
+# Fill these in once confirmed with your accountant.
+place_of_registration: ""   # for example: Ireland
+registered_number: ""       # CRO company number
+registered_office: ""       # full registered office address on one line
+vat_number: ""              # only if VAT-registered

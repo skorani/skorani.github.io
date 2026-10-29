@@ -1,0 +1,39 @@
+{%- assign p = site.data.profile -%}
+{%- assign c = site.data.company -%}
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__id">
+      <p class="site-footer__name">{{ p.name }}</p>
+      <p>{{ p.descriptor }} · {{ p.location }}</p>
+    </div>
+    <ul class="site-footer__links" role="list">
+      <li><a href="{% include mailto.html %}">{{ p.email }}</a></li>
+      <li><a href="{{ p.linkedin }}">LinkedIn</a></li>
+      <li><a href="{{ p.github }}">GitHub</a></li>
+    </ul>
+    <div class="site-footer__legal">
+      <p>Consulting services are provided by {{ c.legal_name }}.</p>
+      {%- comment -%} Company particulars: only values set in _data/company.yml are shown. {%- endcomment -%}
+      {%- assign particulars = "" | split: "" -%}
+      {%- if c.registered_number != "" -%}
+        {%- if c.place_of_registration != "" -%}
+          {%- capture item %}Registered in {{ c.place_of_registration }}, company number {{ c.registered_number }}{% endcapture -%}
+        {%- else -%}
+          {%- capture item %}Company number {{ c.registered_number }}{% endcapture -%}
+        {%- endif -%}
+        {%- assign particulars = particulars | push: item -%}
+      {%- endif -%}
+      {%- if c.registered_office != "" -%}
+        {%- capture item %}Registered office: {{ c.registered_office }}{% endcapture -%}
+        {%- assign particulars = particulars | push: item -%}
+      {%- endif -%}
+      {%- if c.vat_number != "" -%}
+        {%- capture item %}VAT number {{ c.vat_number }}{% endcapture -%}
+        {%- assign particulars = particulars | push: item -%}
+      {%- endif -%}
+      {%- if particulars.size > 0 %}
+      <p>{{ particulars | join: ". " }}.</p>
+      {%- endif %}
+    </div>
+  </div>
+</footer>

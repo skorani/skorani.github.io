@@ -1,0 +1,15 @@
+# Main navigation, in order. "#contact" works on every page because each
+# page ends with the contact section.
+
+- label: Services
+  url: /services/
+- label: Work
+  url: /#work
+- label: Writing
+  url: /writing/
+- label: Speaking
+  url: /speaking/
+- label: About
+  url: /#about
+- label: Contact
+  url: "#contact"

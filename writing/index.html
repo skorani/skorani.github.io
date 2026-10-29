@@ -1,0 +1,61 @@
+---
+layout: default
+title: Writing and research
+description: >-
+  Technical writing by Samira Korani on LLM evaluation, knowledge graphs and
+  graph machine learning, plus research on relation extraction and knowledge
+  graph construction.
+---
+{%- assign w = site.data.writing -%}
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="container">
+    <p class="eyebrow">Writing</p>
+    <h1 id="page-title">Writing and research</h1>
+    <p class="lead">Notes from building and evaluating systems with knowledge graphs and LLMs. Most of my articles are published on Medium.</p>
+  </div>
+</section>
+
+<section class="section section--surface section--flush-top" aria-labelledby="articles-title">
+  <div class="container">
+    <h2 class="section-label" id="articles-title">Articles</h2>
+    <ul class="article-list" role="list">
+      {%- for a in w.articles %}
+      <li>
+        <time datetime="{{ a.date | date: '%Y-%m-%d' }}">{{ a.date | date: "%B %Y" }}</time>
+        <div>
+          <a class="article-list__title" href="{{ a.url | escape }}">{{ a.title }}</a>
+          <p>{{ a.summary }}</p>
+          <p class="article-list__topic">{{ a.topic }}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p class="more-link"><a class="arrow-link" href="{{ site.data.profile.medium }}">All posts on Medium</a></p>
+  </div>
+</section>
+
+<section class="section" id="research" aria-labelledby="research-title">
+  <div class="container split">
+    <div>
+      <h2 id="research-title">Research</h2>
+      <ul class="article-list" role="list">
+        {%- for r in w.research %}
+        <li class="article-list__single">
+          <div>
+            <p class="article-list__title">{{ r.title }}</p>
+            <p>{{ r.venue }}, {{ r.year }}. <a href="{{ r.url | escape }}">{{ r.link_label }}</a></p>
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 id="interests">Research interests</h2>
+      <ul class="checklist" role="list">
+        {%- for i in w.research_interests %}
+        <li>{{ i }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

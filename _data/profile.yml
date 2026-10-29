@@ -1,0 +1,65 @@
+# Personal details shown across the site. Edit here, not in the page files.
+
+name: Samira Korani
+descriptor: Knowledge Graphs · GraphRAG · LLM Evaluation
+# Used in the homepage <title>: "Samira Korani | <descriptor_title>"
+descriptor_title: Knowledge Graphs, GraphRAG and LLM Evaluation
+location: Galway, Ireland
+
+email: samira.korani@gmail.com
+linkedin: https://www.linkedin.com/in/samirakorani
+github: https://github.com/skorani
+medium: https://medium.com/@SamiraKorani
+
+# Optional. Paste a real scheduling link (for example Cal.com or Calendly)
+# to add "Book a call" buttons. Leave empty to use email only.
+booking_url: ""
+
+# Optional. Add a public CV link only when you want one on the site.
+cv_url: ""
+
+# Prefilled email subjects and bodies for the contact buttons.
+# Avoid the characters & ? # in these texts.
+enquiries:
+  health_check:
+    subject: "Project enquiry: LLM Evaluation Health Check"
+    body: |
+      Hi Samira,
+
+      I'd like to discuss an LLM Evaluation Health Check.
+
+      Company:
+      The workflow (RAG, agent or other):
+      What is going wrong, or what we need to find out:
+      Timing:
+  graphrag:
+    subject: "Project enquiry: GraphRAG Readiness Assessment"
+    body: |
+      Hi Samira,
+
+      I'd like to discuss a GraphRAG Readiness Assessment.
+
+      Company:
+      The use case:
+      The data involved:
+      Timing:
+  prototype:
+    subject: "Project enquiry: Knowledge Graph Prototype Sprint"
+    body: |
+      Hi Samira,
+
+      I'd like to discuss a Knowledge Graph Prototype Sprint.
+
+      Company:
+      What the prototype should prove:
+      The data involved:
+      Timing:
+  speaking:
+    subject: "Speaking or workshop enquiry"
+    body: |
+      Hi Samira,
+
+      Event or team:
+      Date and format (talk, panel, workshop; in person or online):
+      Audience:
+      Topic you have in mind:

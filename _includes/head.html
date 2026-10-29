@@ -1,0 +1,64 @@
+{%- assign p = site.data.profile -%}
+{%- if page.url == "/" -%}
+  {%- assign page_title = p.name | append: " | " | append: p.descriptor_title -%}
+{%- else -%}
+  {%- assign page_title = p.name | append: " | " | append: page.title -%}
+{%- endif -%}
+{%- assign page_description = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign version = site.time | date: '%s' -%}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page_description | escape }}">
+  <meta name="author" content="{{ p.name }}">
+  {%- if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+  {%- endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}">
+  <meta property="og:site_name" content="{{ p.name }}">
+  <meta property="og:locale" content="en_IE">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:description" content="{{ page_description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/brand-kit/social/og-image.png' | absolute_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ p.name }}: {{ p.descriptor }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | escape }}">
+  <meta name="twitter:description" content="{{ page_description | escape }}">
+  <meta name="twitter:image" content="{{ '/brand-kit/social/og-image.png' | absolute_url }}">
+
+  <meta name="theme-color" content="#F7F5EF">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="{{ '/brand-kit/logo/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+
+  <link rel="preload" href="{{ '/brand-kit/fonts/ibm-plex-sans-latin-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/brand-kit/tokens.css' | relative_url }}?v={{ version }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ version }}">
+  {%- if page.person_schema %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ p.name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }},
+    "image": {{ '/assets/img/samira-korani-portrait.jpg' | absolute_url | jsonify }},
+    "description": {{ p.descriptor | jsonify }},
+    "email": {{ p.email | prepend: 'mailto:' | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Galway",
+      "addressCountry": "IE"
+    },
+    "knowsAbout": ["Knowledge graphs", "GraphRAG", "LLM evaluation"],
+    "sameAs": [
+      {{ p.github | jsonify }},
+      {{ p.linkedin | jsonify }}
+    ]
+  }
+  </script>
+  {%- endif %}

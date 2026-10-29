@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>
+      {% include symbol.svg class="brand__symbol" %}
+      <span class="brand__text">
+        <span class="brand__name">{{ site.data.profile.name }}</span>
+        <span class="brand__descriptor">{{ site.data.profile.descriptor }}</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul role="list">
+        {%- for item in site.data.nav %}
+        {%- assign first_char = item.url | slice: 0 %}
+        {%- if first_char == "#" %}{% assign href = item.url %}{% else %}{% assign href = item.url | relative_url %}{% endif %}
+        <li><a href="{{ href }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

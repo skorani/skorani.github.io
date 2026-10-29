@@ -1,0 +1,76 @@
+# Selected technical work: my own demonstrations, open source and research.
+# Not client case studies. Describe only what the public code or source shows.
+
+- id: contextual-kg
+  title: Contextual knowledge graphs for grounding and evaluating LLMs
+  kind: Talk and write-up
+  summary: >-
+    A knowledge graph that combines Geonames, OpenStreetMap, Wikidata and venue
+    data to give LLMs real-world context about places, used both to ground a
+    travel assistant's answers and as ground truth for evaluating a fine-tuned
+    model.
+  tags: [Neo4j, Knowledge graphs, LLM evaluation]
+  links:
+    - label: Watch the NODES 2025 session
+      url: https://www.youtube.com/watch?v=CNtyCgTDGDM
+    - label: Read the evaluation write-up
+      url: https://medium.com/@SamiraKorani/evaluating-a-fine-tuned-llm-using-a-knowledge-graph-and-ground-truth-data-a4fac84516e7
+
+- id: insurance-rag
+  title: Insurance policy RAG prototype
+  kind: Open-source prototype
+  summary: >-
+    A retrieval-augmented assistant over insurance policy and regulatory
+    documents. Documents and chunks are modelled in Neo4j alongside a native
+    vector index, so retrieval can combine similarity search with category
+    filters in Cypher. A local model served through Ollama generates answers,
+    behind a FastAPI service and a Streamlit interface.
+  status: Work in progress. Several modules, including evaluation and tests, are still placeholders.
+  tags: [Python, Neo4j, RAG, FastAPI]
+  links:
+    - label: View the code on GitHub
+      url: https://github.com/skorani/BC_InsurancPolicy_RAG
+
+- id: ecosci
+  title: EcoSci, an LLM agent over a research knowledge graph
+  kind: Hackathon prototype, Ecohack 2025
+  summary: >-
+    Pulls an ecology topic's links to publications from a Neo4j graph,
+    serialises the subgraph for an LLM and asks it to suggest areas for further
+    investigation, with a small Streamlit front end.
+  tags: [Python, Neo4j, Agents]
+  links:
+    - label: View the code on GitHub
+      url: https://github.com/skorani/Ecohack
+    - label: Watch the demo
+      url: https://youtu.be/hfjgEk9JzWw
+
+- id: open-data
+  title: Persian NLP tools and open datasets
+  kind: Earlier open source
+  summary: >-
+    A semantic tokenizer for normalised Persian text, released under the MIT
+    licence, and public datasets for students and researchers covering Persian
+    tweets, named entities and banking statistics.
+  tags: [NLP, Datasets]
+  links:
+    - label: Tokenizer
+      url: https://github.com/skorani/tokenizer
+    - label: Banking dataset
+      url: https://github.com/skorani/persian-dataset
+    - label: Tweet dataset
+      url: https://gitlab.com/skorani/persian_tweet
+    - label: NER dataset
+      url: https://github.com/OverFlowData/NER-
+
+# When the GraphRAG agent repository has code and a README, describe what it
+# actually does and uncomment:
+# - id: graphrag-rdf
+#   title: GraphRAG agent over an RDF knowledge graph
+#   kind: Open-source demonstration
+#   summary: >-
+#     (Describe the implemented features here.)
+#   tags: [GraphRAG, RDF, Agents]
+#   links:
+#     - label: View the code on GitHub
+#       url: https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-

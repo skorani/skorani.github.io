@@ -1,0 +1,9 @@
+<ol class="steps" role="list">
+  {%- for step in site.data.process %}
+  <li>
+    <span class="steps__num" aria-hidden="true">{{ forloop.index }}</span>
+    <h3 class="steps__title">{{ step.title }}</h3>
+    <p>{{ step.text }}</p>
+  </li>
+  {%- endfor %}
+</ol>

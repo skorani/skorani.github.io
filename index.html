@@ -1,0 +1,257 @@
+---
+layout: default
+description: >-
+  Samira Korani helps engineering teams evaluate RAG and agent systems,
+  investigate unreliable outputs, and make better decisions about knowledge
+  graphs and production AI. Based in Galway, Ireland.
+person_schema: true
+---
+{%- assign p = site.data.profile -%}
+{%- assign featured = site.data.services | where: "featured", true | first -%}
+{%- assign talks = site.data.talks -%}
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">LLM evaluation and knowledge graph consulting</p>
+      <h1 id="hero-title">Find out where your AI system fails and what to fix.</h1>
+      <p class="lead">I help engineering teams evaluate RAG and agent systems, investigate unreliable outputs, and make better decisions about knowledge graphs and production AI.</p>
+      <div class="actions">
+        <a class="button" href="{% include mailto.html type="health_check" %}">Discuss your project</a>
+        <a class="button button--secondary" href="#health-check">See the Health Check</a>
+      </div>
+    </div>
+    <div class="hero__offer">
+      <p class="eyebrow">Featured offer</p>
+      <h2 class="hero__offer-title" id="hero-offer-title">{{ featured.name }}</h2>
+      <dl class="facts facts--compact">
+        <div><dt>Fee</dt><dd>{{ featured.fee }} <span class="facts__note">{{ featured.fee_note }}</span></dd></div>
+        <div><dt>Time</dt><dd>{{ featured.duration }} <span class="facts__note">{{ featured.duration_note }}</span></dd></div>
+        <div><dt>Scope</dt><dd>{{ featured.scope_short }}</dd></div>
+      </dl>
+      <a class="arrow-link" href="#health-check">What's included</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" id="credibility" aria-labelledby="credibility-title">
+  <div class="container">
+    <h2 class="section-label" id="credibility-title">Public work you can check</h2>
+    <ul class="evidence" role="list">
+      <li class="evidence__item">
+        <p class="evidence__label">Speaker, NODES 2025</p>
+        <p class="evidence__title">{{ talks.featured_talk.title }}</p>
+        <a href="{{ talks.featured_talk.url | escape }}">Watch the session<span class="visually-hidden"> on YouTube</span></a>
+      </li>
+      <li class="evidence__item">
+        <p class="evidence__label">Recognition</p>
+        <p class="evidence__title">{{ talks.recognition.title }}, {{ talks.recognition.date | date: "%B %Y" }}</p>
+        <a href="{{ talks.recognition.url | escape }}">Read the feature<span class="visually-hidden"> on neo4j.com</span></a>
+      </li>
+      <li class="evidence__item">
+        <p class="evidence__label">Writing</p>
+        <p class="evidence__title">{{ site.data.writing.articles[0].title }}</p>
+        <a href="{{ site.data.writing.articles[0].url }}">Read the article<span class="visually-hidden"> on Medium</span></a>
+      </li>
+      <li class="evidence__item">
+        <p class="evidence__label">Experience</p>
+        <p class="evidence__title">Production AI, including financial services and insurance</p>
+        <a href="{{ p.linkedin }}">Experience on LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--surface" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Services</p>
+      <h2 id="services-title">Fixed-scope work on LLM evaluation and knowledge graphs</h2>
+      <p>I do the work myself, so you deal with one person from the first call to the handover.</p>
+    </div>
+
+    {% include service-detail.html service=featured heading="h3" label="Featured" %}
+
+    <h3 class="subsection-title">Other ways I can help</h3>
+    <div class="cards cards--2">
+      {%- for s in site.data.services %}
+      {%- unless s.featured %}
+      {% include service-card.html service=s %}
+      {%- endunless %}
+      {%- endfor %}
+    </div>
+
+    <p class="terms-note">Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation. <a href="{{ '/services/' | relative_url }}">Full service details</a></p>
+  </div>
+</section>
+
+<section class="section" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Process</p>
+      <h2 id="process-title">How an engagement works</h2>
+    </div>
+    {% include process.html %}
+  </div>
+</section>
+
+<section class="section section--surface" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Work</p>
+      <h2 id="work-title">Selected technical work</h2>
+      <p>Open-source projects, talks and write-ups. These are my own demonstrations and research, not client case studies.</p>
+    </div>
+    <div class="cards cards--2">
+      {%- for item in site.data.projects %}
+      <article class="card project" id="{{ item.id }}" aria-labelledby="{{ item.id }}-title">
+        <p class="card__kind">{{ item.kind }}</p>
+        <h3 class="card__title" id="{{ item.id }}-title">{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        {%- if item.status %}
+        <p class="status"><strong>Status:</strong> {{ item.status }}</p>
+        {%- endif %}
+        <ul class="tags" role="list" aria-label="Technologies">
+          {%- for tag in item.tags %}<li>{{ tag }}</li>{% endfor -%}
+        </ul>
+        <ul class="card__links" role="list">
+          {%- for link in item.links %}
+          <li><a href="{{ link.url | escape }}">{{ link.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+    <p class="more-link"><a class="arrow-link" href="{{ p.github }}">More on GitHub</a></p>
+  </div>
+</section>
+
+<section class="section" id="writing" aria-labelledby="writing-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Writing</p>
+      <h2 id="writing-title">Notes from building with graphs and LLMs</h2>
+    </div>
+    <ul class="article-list" role="list">
+      {%- for a in site.data.writing.articles %}
+      {%- if a.home %}
+      <li>
+        <time datetime="{{ a.date | date: '%Y-%m-%d' }}">{{ a.date | date: "%B %Y" }}</time>
+        <div>
+          <a class="article-list__title" href="{{ a.url | escape }}">{{ a.title }}</a>
+          <p>{{ a.summary }}</p>
+        </div>
+      </li>
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+    <p class="more-link"><a class="arrow-link" href="{{ '/writing/' | relative_url }}">All writing and research</a></p>
+  </div>
+</section>
+
+<section class="section section--surface" id="speaking" aria-labelledby="speaking-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Speaking</p>
+      <h2 id="speaking-title">Speaking and workshops</h2>
+      <p>I speak about evaluating LLM systems and putting knowledge graphs to work, for conferences, meetups and engineering teams.</p>
+    </div>
+    <div class="cards cards--2">
+      <article class="card highlight" aria-labelledby="talk-title">
+        <p class="card__kind">{{ talks.featured_talk.event }} · <time datetime="{{ talks.featured_talk.date | date: '%Y-%m-%d' }}">{{ talks.featured_talk.date | date: "%-d %B %Y" }}</time></p>
+        <h3 class="card__title" id="talk-title">{{ talks.featured_talk.title }}</h3>
+        <p>{{ talks.featured_talk.summary }}</p>
+        <ul class="card__links" role="list">
+          <li><a href="{{ talks.featured_talk.url | escape }}">{{ talks.featured_talk.link_label }}</a></li>
+        </ul>
+      </article>
+      <article class="card highlight" aria-labelledby="recognition-title">
+        <p class="card__kind">{{ talks.recognition.source }} · <time datetime="{{ talks.recognition.date | date: '%Y-%m-%d' }}">{{ talks.recognition.date | date: "%-d %B %Y" }}</time></p>
+        <h3 class="card__title" id="recognition-title">{{ talks.recognition.title }}</h3>
+        <p>{{ talks.recognition.summary }}</p>
+        <ul class="card__links" role="list">
+          <li><a href="{{ talks.recognition.url | escape }}">{{ talks.recognition.link_label }}</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="split">
+      <div>
+        <h3 class="subsection-title">Topics</h3>
+        <ul class="topic-list" role="list">
+          {%- for t in talks.topics %}
+          <li><strong class="topic-list__title">{{ t.title }}</strong> {{ t.text }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h3 class="subsection-title">Workshops</h3>
+        <ul class="topic-list" role="list">
+          {%- for w in talks.workshops %}
+          <li><strong class="topic-list__title">{{ w.title }}</strong> {{ w.text }}</li>
+          {%- endfor %}
+        </ul>
+        <p class="muted">Workshops are available for teams and events on enquiry.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="button" href="{% include mailto.html type="speaking" %}">Invite me to speak</a>
+      <a class="button button--secondary" href="{{ '/speaking/' | relative_url }}">Talk history</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container about">
+    <div class="about__portrait">
+      <picture>
+        <source srcset="{{ '/assets/img/samira-korani-portrait.webp' | relative_url }}" type="image/webp">
+        <img src="{{ '/assets/img/samira-korani-portrait.jpg' | relative_url }}" width="480" height="600" alt="Samira Korani" loading="lazy" decoding="async">
+      </picture>
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">I build the kind of systems I evaluate</h2>
+      <div class="prose">
+        <p>I'm Samira Korani, a machine learning engineer based in Galway, Ireland. I've worked in natural language processing and machine learning since 2013. Today I focus on production AI: evaluating LLM applications, building knowledge graphs and GraphRAG systems, and designing agentic workflows in Python, with the observability to see what they are doing.</p>
+        <p>My experience includes AI work in financial services and insurance, and co-founding Tripoh, a travel assistant built on LLMs and a tourism knowledge graph. My research background is in relation extraction and knowledge graph construction, and I have taught on the Knowledge Graphs (2022) and Programming I and II (2023) modules at NUI Galway, now the University of Galway.</p>
+        <p>I grew up in Iran, where a long-running question, how to live my life my way, took me through languages, cultures, music and dance before it led me to technology.</p>
+      </div>
+
+      <h3 class="subsection-title">At a glance</h3>
+      <dl class="glance">
+        <div><dt>Focus</dt><dd>LLM evaluation, knowledge graphs, GraphRAG, agentic workflows</dd></div>
+        <div><dt>Sectors</dt><dd>Financial services, insurance, travel</dd></div>
+        <div><dt>Tools</dt><dd>Python, Neo4j and Cypher, FastAPI, Docker, Kubernetes, AWS, Google Cloud</dd></div>
+        <div><dt>Community</dt><dd>NODES 2025 speaker; Neo4j Featured Community Member</dd></div>
+        <div><dt>Based in</dt><dd>{{ p.location }}</dd></div>
+      </dl>
+      <p>My full work history is on LinkedIn, and my code is on GitHub.</p>
+      <div class="actions">
+        <a class="button button--secondary" href="{{ p.linkedin }}">LinkedIn profile</a>
+        <a class="button button--secondary" href="{{ p.github }}">GitHub profile</a>
+        {%- if p.cv_url != "" %}
+        <a class="button button--secondary" href="{{ p.cv_url | escape }}">CV</a>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Questions teams usually ask</h2>
+    </div>
+    <div class="faq">
+      {%- for f in site.data.faq %}
+      <details>
+        <summary>{{ f.q }}</summary>
+        <p>{{ f.a | replace: "[company]", site.data.company.legal_name }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

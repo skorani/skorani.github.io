@@ -1,0 +1,12 @@
+{%- comment -%}
+  Builds a mailto: URL. Usage: href="{% include mailto.html type="health_check" %}"
+  `type` is a key under `enquiries` in _data/profile.yml; omit it for a plain link.
+{%- endcomment -%}
+{%- assign enquiry = site.data.profile.enquiries[include.type] -%}
+mailto:{{ site.data.profile.email }}
+{%- if enquiry -%}
+?subject={{ enquiry.subject | uri_escape | replace: "&", "%26" | replace: "?", "%3F" | replace: "#", "%23" }}
+{%- if enquiry.body -%}
+&amp;body={{ enquiry.body | uri_escape | replace: "&", "%26" | replace: "?", "%3F" | replace: "#", "%23" }}
+{%- endif -%}
+{%- endif -%}

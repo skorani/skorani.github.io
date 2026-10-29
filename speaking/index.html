@@ -1,0 +1,107 @@
+---
+layout: default
+title: Speaking and workshops
+description: >-
+  Talks, workshops and community work by Samira Korani, including NODES 2025
+  and recognition as a Neo4j Featured Community Member. Speaking enquiries
+  welcome.
+contact_primary: speaking
+---
+{%- assign talks = site.data.talks -%}
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="container">
+    <p class="eyebrow">Speaking</p>
+    <h1 id="page-title">Speaking and workshops</h1>
+    <p class="lead">I speak about evaluating LLM systems and putting knowledge graphs to work, for conferences, meetups and engineering teams.</p>
+    <div class="actions">
+      <a class="button" href="{% include mailto.html type="speaking" %}">Invite me to speak</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface section--flush-top" aria-labelledby="recent-title">
+  <div class="container">
+    <h2 class="section-label" id="recent-title">Recent</h2>
+    <div class="cards cards--2">
+      <article class="card highlight" aria-labelledby="talk-title">
+        <p class="card__kind">{{ talks.featured_talk.event }} · <time datetime="{{ talks.featured_talk.date | date: '%Y-%m-%d' }}">{{ talks.featured_talk.date | date: "%-d %B %Y" }}</time></p>
+        <h3 class="card__title" id="talk-title">{{ talks.featured_talk.title }}</h3>
+        <p>{{ talks.featured_talk.summary }}</p>
+        <ul class="card__links" role="list">
+          <li><a href="{{ talks.featured_talk.url | escape }}">{{ talks.featured_talk.link_label }}</a></li>
+          <li><a href="{{ talks.featured_talk.event_url | escape }}">NODES 2025 sessions</a></li>
+        </ul>
+      </article>
+      <article class="card highlight" aria-labelledby="recognition-title">
+        <p class="card__kind">{{ talks.recognition.source }} · <time datetime="{{ talks.recognition.date | date: '%Y-%m-%d' }}">{{ talks.recognition.date | date: "%-d %B %Y" }}</time></p>
+        <h3 class="card__title" id="recognition-title">{{ talks.recognition.title }}</h3>
+        <p>{{ talks.recognition.summary }}</p>
+        <ul class="card__links" role="list">
+          <li><a href="{{ talks.recognition.url | escape }}">{{ talks.recognition.link_label }}</a></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="topics" aria-labelledby="topics-title">
+  <div class="container split">
+    <div>
+      <h2 id="topics-title">Topics</h2>
+      <ul class="topic-list" role="list">
+        {%- for t in talks.topics %}
+        <li><strong class="topic-list__title">{{ t.title }}</strong> {{ t.text }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 id="workshops">Workshops</h2>
+      <ul class="topic-list" role="list">
+        {%- for w in talks.workshops %}
+        <li><strong class="topic-list__title">{{ w.title }}</strong> {{ w.text }}</li>
+        {%- endfor %}
+      </ul>
+      <p class="muted">Workshops are available for teams and events on enquiry. Tell me about your audience and I'll suggest a format.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" id="history" aria-labelledby="history-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="history-title">Earlier talks</h2>
+    </div>
+    <ul class="timeline" role="list">
+      {%- for t in talks.archive %}
+      <li>
+        <time datetime="{{ t.date | date: '%Y-%m-%d' }}">{{ t.date | date: "%b %Y" }}</time>
+        <div>
+          <p class="timeline__title">{{ t.title }}</p>
+          <p class="timeline__meta">{{ t.event }}{% if t.url %} · <a href="{{ t.url | escape }}">{{ t.link_label }}<span class="visually-hidden">: {{ t.title }}</span></a>{% endif %}</p>
+        </div>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="community" aria-labelledby="community-title">
+  <div class="container split">
+    <div>
+      <h2 id="community-title">Community</h2>
+      <ul class="checklist" role="list">
+        {%- for c in talks.community %}
+        <li><a href="{{ c.url | escape }}">{{ c.text }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 id="interviews">Interviews</h2>
+      <ul class="checklist" role="list">
+        {%- for i in talks.interviews %}
+        <li><a href="{{ i.url | escape }}">{{ i.title }}</a> <span class="muted">({{ i.source }})</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

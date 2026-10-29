@@ -1,0 +1,107 @@
+# Consulting offers, in display order. The homepage features the entry with
+# `featured: true`; the others appear as secondary options.
+# `enquiry` must match a key under `enquiries` in _data/profile.yml.
+
+- id: health-check
+  name: LLM Evaluation Health Check
+  featured: true
+  tagline: Find out where one RAG or agent workflow fails, why, and what to fix first.
+  fee: EUR 2,950
+  fee_note: Fixed project fee
+  duration: About 5 working days
+  duration_note: After access and scope are agreed
+  scope_short: One RAG or agent workflow, up to 50 test cases
+  enquiry: health_check
+  for: >-
+    Engineering teams with a RAG or agent workflow in production, or close to
+    release, who are seeing answers they can't fully trust, or who need
+    evidence before a model change, a launch or a customer conversation.
+  problem: >-
+    When outputs are unreliable, it is rarely obvious whether the cause is
+    retrieval, context assembly, prompting, the model or the source data.
+    Without a baseline, every fix is a guess and every model or prompt change
+    is a risk you can't measure.
+  assess:
+    - Correctness and groundedness of answers against agreed expectations
+    - The failure modes that matter for your workflow, such as missed retrieval, unsupported claims, wrong tool calls or prompt sensitivity
+    - Latency and cost, where the necessary measurements are available
+  deliverables:
+    - Agreed evaluation cases (up to 50), written with your team
+    - Baseline results across the agreed measures
+    - A failure analysis showing where and why the workflow fails
+    - Prioritised fixes, ordered by likely impact and effort
+    - A 60-minute handover with your team
+  scope:
+    - One existing RAG or agent workflow
+    - One agreed evaluation environment
+    - Up to 50 representative test cases
+  limits: >-
+    Fifty well-chosen cases can expose systematic failures, but they are a
+    sample. The results describe how the workflow behaved on those cases; they
+    are not a statistical guarantee of behaviour in production. The Health
+    Check is not a security audit or certification. Implementing fixes is
+    scoped separately.
+  next_step: >-
+    Email me a few lines about the workflow and what's going wrong. I'll reply
+    to arrange a short discovery call and confirm whether the Health Check is
+    the right fit.
+
+- id: graphrag-readiness
+  name: GraphRAG Readiness Assessment
+  tagline: An independent view on whether a knowledge graph will improve your retrieval, before you commit engineering time.
+  fee: EUR 2,950
+  fee_note: Fixed project fee
+  duration: About one week
+  duration_note: After access and scope are agreed
+  scope_short: One use case and its data
+  enquiry: graphrag
+  for: >-
+    Teams considering a knowledge graph or GraphRAG for search, question
+    answering or an agent, who want to know whether it is worth the effort for
+    their data and their users' questions.
+  problem: >-
+    GraphRAG is often proposed as the fix for weak retrieval. Sometimes it is
+    the right answer; sometimes better chunking, metadata or hybrid search
+    would deliver more for less. The choice is hard to reverse once a team has
+    built around it.
+  deliverables:
+    - An assessment of the use case, the questions users ask and the data available
+    - A comparison of graph, vector and hybrid approaches for your case
+    - An architecture recommendation, with its trade-offs
+    - A phased roadmap, including what to build and evaluate first
+  scope:
+    - One use case or product area
+    - Representative data samples and existing documentation
+  next_step: >-
+    Email me a short description of the use case and the data involved. I'll
+    reply to arrange a discovery call.
+
+- id: prototype-sprint
+  name: Knowledge Graph Prototype Sprint
+  tagline: A working knowledge graph prototype on your own data, evaluated and handed over.
+  fee: Scoped by enquiry
+  fee_note: Guide range EUR 7,500–12,000, confirmed in the quotation
+  duration: 2–3 weeks
+  duration_note: Depending on the agreed scope
+  scope_short: One data slice and set of questions
+  enquiry: prototype
+  for: >-
+    Teams that have decided a knowledge graph is worth testing and want a
+    working prototype on their own data rather than a slide deck.
+  problem: >-
+    Knowledge graph projects often stall between the diagram and the first
+    useful query. A focused prototype answers the practical questions: what the
+    graph model looks like, how the data gets in, and whether it improves the
+    answers your users need.
+  deliverables:
+    - A graph model and ingestion pipeline for an agreed slice of your data
+    - A query or retrieval layer for agreed questions, using GraphRAG where it fits
+    - An evaluation of the prototype against agreed cases
+    - Code, documentation and a handover session
+  scope:
+    - One agreed data slice and set of questions
+    - Your environment or an agreed sandbox
+    - Scope, fee and timeline agreed in writing before work starts
+  next_step: >-
+    Email me what you want the prototype to prove. I'll reply to arrange a
+    discovery call, then send a written scope and quotation.

@@ -1,0 +1,24 @@
+{%- comment -%} Compact summary of a secondary service. Param: service. {%- endcomment -%}
+{%- assign s = include.service -%}
+<article class="card service-card" aria-labelledby="card-{{ s.id }}-title">
+  <h3 class="card__title" id="card-{{ s.id }}-title">{{ s.name }}</h3>
+  <p>{{ s.tagline }}</p>
+  <dl class="facts facts--compact">
+    <div>
+      <dt>Fee</dt>
+      <dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd>
+    </div>
+    <div>
+      <dt>Time</dt>
+      <dd>{{ s.duration }}</dd>
+    </div>
+    <div>
+      <dt>Scope</dt>
+      <dd>{{ s.scope_short }}</dd>
+    </div>
+  </dl>
+  <ul class="card__links" role="list">
+    <li><a href="{{ '/services/' | relative_url }}#{{ s.id }}">Full details<span class="visually-hidden">: {{ s.name }}</span></a></li>
+    <li><a href="{% include mailto.html type=s.enquiry %}">Ask about this<span class="visually-hidden">: {{ s.name }}</span></a></li>
+  </ul>
+</article>

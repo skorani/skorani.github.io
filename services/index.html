@@ -1,0 +1,59 @@
+---
+layout: default
+title: Consulting services
+description: >-
+  LLM Evaluation Health Check, GraphRAG Readiness Assessment and Knowledge
+  Graph Prototype Sprint: fixed-scope consulting from Samira Korani, provided
+  by MILEAWAY AI SYSTEMS LIMITED.
+---
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="container">
+    <p class="eyebrow">Services</p>
+    <h1 id="page-title">Consulting services</h1>
+    <p class="lead">Three fixed-scope ways to find out what's wrong with an LLM system, decide whether a knowledge graph is worth it, or prove one on your own data. I do the work myself, from the first call to the handover.</p>
+    <nav class="toc" aria-label="Services on this page">
+      <ul role="list">
+        {%- for s in site.data.services %}
+        <li><a href="#{{ s.id }}">{{ s.name }}</a></li>
+        {%- endfor %}
+        <li><a href="#how-it-works">How an engagement works</a></li>
+        <li><a href="#terms">Commercial terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<section class="section section--surface section--flush-top" aria-label="Service details">
+  <div class="container stack-lg">
+    {%- for s in site.data.services %}
+    {% if s.featured %}{% assign label = "Featured" %}{% else %}{% assign label = nil %}{% endif %}
+    {% include service-detail.html service=s heading="h2" label=label %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="how-it-works" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Process</p>
+      <h2 id="process-title">How an engagement works</h2>
+    </div>
+    {% include process.html %}
+  </div>
+</section>
+
+<section class="section section--surface" id="terms" aria-labelledby="terms-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Terms</p>
+      <h2 id="terms-title">Commercial terms</h2>
+    </div>
+    <ul class="checklist prose" role="list">
+      <li>Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}, the company through which I provide consulting services.</li>
+      <li>Fees are fixed for the agreed scope and quoted in euro. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation.</li>
+      <li>Timelines start once access and scope are agreed in writing.</li>
+      <li>Assessments report on the agreed sample and environment. They are not statistical guarantees, security audits or certifications.</li>
+      <li>Implementation beyond an assessment is scoped and quoted separately.</li>
+    </ul>
+  </div>
+</section>
