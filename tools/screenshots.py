@@ -12,7 +12,8 @@ from playwright.sync_api import sync_playwright
 OUT = pathlib.Path(__file__).resolve().parents[1] / "review" / "screenshots"
 OUT.mkdir(parents=True, exist_ok=True)
 BASE = "http://127.0.0.1:4000"
-pages = {"home": "/", "services": "/services/", "speaking": "/speaking/", "writing": "/writing/", "404": "/404.html"}
+pages = {"home": "/", "services": "/services/", "health-check": "/services/llm-evaluation-health-check/",
+         "graphrag-readiness": "/services/graphrag-readiness-assessment/", "prototype-sprint": "/services/knowledge-graph-prototype-sprint/", "speaking": "/speaking/", "writing": "/writing/", "404": "/404.html"}
 widths = [int(w) for w in sys.argv[1].split(",")] if len(sys.argv) > 1 else [320, 768, 1440]
 only = sys.argv[2].split(",") if len(sys.argv) > 2 else list(pages)
 with sync_playwright() as p:

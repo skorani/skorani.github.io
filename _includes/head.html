@@ -39,6 +39,24 @@
   <link rel="preload" href="{{ '/brand-kit/fonts/ibm-plex-sans-latin-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/brand-kit/tokens.css' | relative_url }}?v={{ version }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ version }}">
+  {%- if page.collection == "packages" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": {{ page.title | jsonify }},
+    "description": {{ page.tagline | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "serviceType": "Consulting",
+    "provider": {"@type": "Organization", "name": {{ site.data.company.legal_name | jsonify }}}
+    {%- if page.price_eur %},
+    "offers": {"@type": "Offer", "price": {{ page.price_eur | jsonify }}, "priceCurrency": "EUR"}
+    {%- elsif page.price_low %},
+    "offers": {"@type": "AggregateOffer", "lowPrice": {{ page.price_low | jsonify }}, "highPrice": {{ page.price_high | jsonify }}, "priceCurrency": "EUR"}
+    {%- endif %}
+  }
+  </script>
+  {%- endif %}
   {%- if page.person_schema %}
   <script type="application/ld+json">
   {

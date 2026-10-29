@@ -44,10 +44,11 @@ GitHub Pages is set to **Deploy from a branch: `main`, `/ (root)`**. Anything me
 
 | To change… | Edit |
 |---|---|
-| Services, prices, durations, scope, deliverables | `_data/services.yml` |
-| The featured service | `featured: true` on one entry in `_data/services.yml` |
-| Engagement steps | `_data/process.yml` |
-| FAQs | `_data/faq.yml` |
+| A consulting package: price, timing, audience, deliverables, steps, FAQ | its file in `_packages/` (one file = one page at `/services/<file-name>/`) |
+| Show or hide a package everywhere | `published: true` or `false` in its `_packages/` file |
+| The featured package (homepage) | `featured: true` in one `_packages/` file; `order` sets the order |
+| Generic engagement steps (services overview) | `_data/process.yml` |
+| Homepage FAQs | `_data/faq.yml` |
 | Projects in "Selected technical work" | `_data/projects.yml` |
 | Talks, recognition, topics, workshops, talk history | `_data/talks.yml` |
 | Articles and research | `_data/writing.yml` (`home: true` puts an article on the homepage; keep it to three) |
@@ -64,7 +65,13 @@ GitHub Pages is set to **Deploy from a branch: `main`, `/ (root)`**. Anything me
 
 ### Common edits
 
-**Change a price.** In `_data/services.yml`, edit `fee` (shown exactly as written, e.g. `EUR 3,200`) and `fee_note`. The homepage, the services page and the hero card all update.
+**Change a price.** In the package's file in `_packages/`, edit `fee` (shown exactly as written, e.g. `EUR 3,200`) and `fee_note`, and the number in `price_eur` (or `price_low`/`price_high` for a range), which search engines read. The package page, the homepage and `/services/` all update.
+
+**Launch with fewer packages.** Set `published: false` in a package file. Its page, homepage card, links and sitemap entry all disappear; set it back to `true` to relaunch at the same address.
+
+**Add a package.** Copy a file in `_packages/`, rename it (the file name becomes the web address), change every field, and add a matching email subject under `enquiries` in `_data/profile.yml`.
+
+**Add the "Book a call" button.** Paste a real scheduling link (for example Cal.com or a Google Calendar appointment page) into `booking_url` in `_data/profile.yml`. Every package page and the contact section switch from email to "Book a call", with email kept as the second option.
 
 **Add the company's registered details.** In `_data/company.yml`, fill in `place_of_registration`, `registered_number`, `registered_office` and, only if VAT-registered, `vat_number`. Empty values stay off the site, so never type placeholder text there.
 
@@ -92,8 +99,9 @@ While `bundle exec jekyll serve` is running:
 ```text
 _config.yml          site settings and the list of files kept off the website
 _data/               all editable content (see the table above)
-_includes/           shared pieces: head and SEO, header, footer, contact section, service blocks
-_layouts/            page shell (default.html) and moved-page redirects (redirect.html)
+_packages/           one file per consulting package; each becomes /services/<file-name>/
+_includes/           shared pieces: head and SEO, header, footer, contact section, package blocks
+_layouts/            page shell (default.html), package pages (package.html), redirects (redirect.html)
 index.html           homepage
 services/ speaking/ writing/   inner pages
 404.html             not-found page

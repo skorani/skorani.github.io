@@ -1,34 +1,29 @@
 ---
 layout: default
-title: Consulting services
+title: Consulting packages
 description: >-
-  LLM Evaluation Health Check, GraphRAG Readiness Assessment and Knowledge
-  Graph Prototype Sprint: fixed-scope consulting from Samira Korani, provided
-  by MILEAWAY AI SYSTEMS LIMITED.
+  Fixed-price consulting packages from Samira Korani for LLM evaluation,
+  GraphRAG and knowledge graphs, for startups and scale-ups. Provided by
+  MILEAWAY AI SYSTEMS LIMITED.
 ---
+{%- assign packages = site.packages | sort: "order" -%}
 <section class="page-intro" aria-labelledby="page-title">
   <div class="container">
     <p class="eyebrow">Services</p>
-    <h1 id="page-title">Consulting services</h1>
-    <p class="lead">Three fixed-scope ways to find out what's wrong with an LLM system, decide whether a knowledge graph is worth it, or prove one on your own data. I do the work myself, from the first call to the handover.</p>
-    <nav class="toc" aria-label="Services on this page">
-      <ul role="list">
-        {%- for s in site.data.services %}
-        <li><a href="#{{ s.id }}">{{ s.name }}</a></li>
-        {%- endfor %}
-        <li><a href="#how-it-works">How an engagement works</a></li>
-        <li><a href="#terms">Commercial terms</a></li>
-      </ul>
-    </nav>
+    <h1 id="page-title">Consulting packages</h1>
+    <p class="lead">Fixed-price packages to find out what's wrong with an LLM system, decide whether a knowledge graph is worth it, or prove one on your own data. I do the work myself, from the first call to the handover.</p>
+    <p class="hero__audience">For Irish startups and scale-ups building AI features, especially in fintech and insurtech, and for teams already using Neo4j.</p>
   </div>
 </section>
 
-<section class="section section--surface section--flush-top" aria-label="Service details">
-  <div class="container stack-lg">
-    {%- for s in site.data.services %}
-    {% if s.featured %}{% assign label = "Featured" %}{% else %}{% assign label = nil %}{% endif %}
-    {% include service-detail.html service=s heading="h2" label=label %}
-    {%- endfor %}
+<section class="section section--surface section--flush-top" aria-labelledby="packages-title">
+  <div class="container">
+    <h2 class="section-label" id="packages-title">Packages</h2>
+    <div class="cards cards--{% if packages.size >= 3 %}3{% else %}2{% endif %}">
+      {%- for pkg in packages %}
+      {% include package-card.html package=pkg %}
+      {%- endfor %}
+    </div>
   </div>
 </section>
 
@@ -37,6 +32,7 @@ description: >-
     <div class="section__header">
       <p class="eyebrow">Process</p>
       <h2 id="process-title">How an engagement works</h2>
+      <p>Every package follows the same shape. Each package page describes its own steps in detail.</p>
     </div>
     {% include process.html %}
   </div>
@@ -50,10 +46,10 @@ description: >-
     </div>
     <ul class="checklist prose" role="list">
       <li>Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}, the company through which I provide consulting services.</li>
-      <li>Fees are fixed for the agreed scope and quoted in euro. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation.</li>
+      <li>Prices are fixed for the agreed scope and quoted in euro. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation.</li>
       <li>Timelines start once access and scope are agreed in writing.</li>
       <li>Assessments report on the agreed sample and environment. They are not statistical guarantees, security audits or certifications.</li>
-      <li>Implementation beyond an assessment is scoped and quoted separately.</li>
+      <li>Work beyond a package is scoped and quoted separately.</li>
     </ul>
   </div>
 </section>

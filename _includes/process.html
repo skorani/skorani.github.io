@@ -1,5 +1,7 @@
+{%- comment -%} Numbered steps. Param: steps (defaults to _data/process.yml). {%- endcomment -%}
+{%- assign steps = include.steps | default: site.data.process -%}
 <ol class="steps" role="list">
-  {%- for step in site.data.process %}
+  {%- for step in steps %}
   <li>
     <span class="steps__num" aria-hidden="true">{{ forloop.index }}</span>
     <h3 class="steps__title">{{ step.title }}</h3>

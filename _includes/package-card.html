@@ -1,0 +1,15 @@
+{%- comment -%} Summary card for a package, linking to its own page. Param: package. {%- endcomment -%}
+{%- assign pk = include.package -%}
+<article class="card service-card" id="{{ pk.anchor }}" aria-labelledby="card-{{ pk.anchor }}-title">
+  <h3 class="card__title" id="card-{{ pk.anchor }}-title"><a class="card__title-link" href="{{ pk.url | relative_url }}">{{ pk.title }}</a></h3>
+  <p>{{ pk.tagline }}</p>
+  <dl class="facts facts--compact">
+    <div><dt>Price</dt><dd>{{ pk.fee }} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
+    <div><dt>Time</dt><dd>{{ pk.duration }}</dd></div>
+    <div><dt>Scope</dt><dd>{{ pk.scope_short }}</dd></div>
+  </dl>
+  <ul class="card__links" role="list">
+    <li><a class="arrow-link" href="{{ pk.url | relative_url }}">See the package<span class="visually-hidden">: {{ pk.title }}</span></a></li>
+    <li><a href="{% include mailto.html type=pk.enquiry %}">Ask about this<span class="visually-hidden">: {{ pk.title }}</span></a></li>
+  </ul>
+</article>

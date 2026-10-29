@@ -1,0 +1,35 @@
+{%- comment -%} Homepage block for the featured package. Param: package. {%- endcomment -%}
+{%- assign pk = include.package -%}
+<article class="offer" id="{{ pk.anchor }}" aria-labelledby="{{ pk.anchor }}-title">
+  <div class="offer__main">
+    <p class="eyebrow">Featured package</p>
+    <h3 class="offer__title" id="{{ pk.anchor }}-title">{{ pk.title }}</h3>
+    <p class="offer__tagline">{{ pk.tagline }}</p>
+    <h4 class="offer__subhead">Who it's for</h4>
+    <p>{{ pk.for }}</p>
+    <h4 class="offer__subhead">What you get</h4>
+    <ul class="checklist" role="list">
+      {%- for d in pk.deliverables %}
+      <li>{{ d }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="offer__side">
+    <dl class="facts">
+      <div><dt>Price</dt><dd>{{ pk.fee }} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
+      <div><dt>Time</dt><dd>{{ pk.duration }} <span class="facts__note">{{ pk.duration_note }}</span></dd></div>
+      <div>
+        <dt>Scope</dt>
+        <dd>
+          <ul role="list">
+            {%- for item in pk.scope %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+        </dd>
+      </div>
+    </dl>
+    {% include cta.html enquiry=pk.enquiry name=pk.title %}
+    <p class="more-link"><a class="arrow-link" href="{{ pk.url | relative_url }}">Full package details<span class="visually-hidden">: {{ pk.title }}</span></a></p>
+  </div>
+</article>

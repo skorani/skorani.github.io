@@ -14,6 +14,19 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+# Consulting packages: one file each in _packages/, published at /services/<file-name>/
+collections:
+  packages:
+    output: true
+    permalink: /services/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: packages
+    values:
+      layout: package
+
 # Not part of the published site
 exclude:
   - README.md

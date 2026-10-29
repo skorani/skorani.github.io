@@ -23,7 +23,8 @@ if not AXE_FILE.exists():
     AXE_FILE.parent.mkdir(parents=True, exist_ok=True)
     AXE_FILE.write_bytes(urllib.request.urlopen("https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.2/axe.min.js").read())
 AXE = AXE_FILE.read_text()
-PAGES = ["/", "/services/", "/speaking/", "/writing/", "/404.html"]
+PAGES = ["/", "/services/", "/services/llm-evaluation-health-check/", "/services/graphrag-readiness-assessment/",
+         "/services/knowledge-graph-prototype-sprint/", "/speaking/", "/writing/", "/404.html"]
 REDIRECTS = {"/Activities.html": "/speaking/", "/Publications.html": "/writing/#research",
              "/Resource.html": "/#open-data", "/teaching.html": "/#about", "/blog.html": "/writing/", "/docs/": "/"}
 EMAIL = "samira.korani@gmail.com"

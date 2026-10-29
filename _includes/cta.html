@@ -1,0 +1,14 @@
+{%- comment -%}
+  Main call to action for a package. Uses the booking link when one is set in
+  _data/profile.yml, otherwise a prefilled email.
+  Params: enquiry (key under `enquiries`), name (package name, for screen readers).
+{%- endcomment -%}
+{%- assign booking = site.data.profile.booking_url -%}
+<div class="actions">
+  {%- if booking != "" %}
+  <a class="button" href="{{ booking | escape }}">Book a call<span class="visually-hidden"> about the {{ include.name }}</span></a>
+  <a class="button button--secondary" href="{% include mailto.html type=include.enquiry %}">Email me<span class="visually-hidden"> about the {{ include.name }}</span></a>
+  {%- else %}
+  <a class="button" href="{% include mailto.html type=include.enquiry %}">Discuss your project<span class="visually-hidden">: {{ include.name }}</span></a>
+  {%- endif %}
+</div>

@@ -1,0 +1,24 @@
+{%- comment -%} Evidence strip: public, checkable work. Param: heading_id. {%- endcomment -%}
+{%- assign talks = site.data.talks -%}
+<ul class="evidence" role="list">
+  <li class="evidence__item">
+    <p class="evidence__label">Speaker, NODES 2025</p>
+    <p class="evidence__title">{{ talks.featured_talk.title }}</p>
+    <a href="{{ talks.featured_talk.url | escape }}">Watch the session<span class="visually-hidden"> on YouTube</span></a>
+  </li>
+  <li class="evidence__item">
+    <p class="evidence__label">Recognition</p>
+    <p class="evidence__title">{{ talks.recognition.title }}, {{ talks.recognition.date | date: "%B %Y" }}</p>
+    <a href="{{ talks.recognition.url | escape }}">Read the feature<span class="visually-hidden"> on neo4j.com</span></a>
+  </li>
+  <li class="evidence__item">
+    <p class="evidence__label">Writing</p>
+    <p class="evidence__title">{{ site.data.writing.articles[0].title }}</p>
+    <a href="{{ site.data.writing.articles[0].url | escape }}">Read the article<span class="visually-hidden"> on Medium</span></a>
+  </li>
+  <li class="evidence__item">
+    <p class="evidence__label">Experience</p>
+    <p class="evidence__title">Production AI, including financial services and insurance</p>
+    <a href="{{ site.data.profile.linkedin }}">Experience on LinkedIn</a>
+  </li>
+</ul>

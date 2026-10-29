@@ -12,7 +12,9 @@
         {%- for item in site.data.nav %}
         {%- assign first_char = item.url | slice: 0 %}
         {%- if first_char == "#" %}{% assign href = item.url %}{% else %}{% assign href = item.url | relative_url %}{% endif %}
-        <li><a href="{{ href }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {%- assign current = false %}
+        {%- if page.url == item.url %}{% assign current = "page" %}{% elsif page.collection == "packages" and item.url == "/services/" %}{% assign current = "true" %}{% endif %}
+        <li><a href="{{ href }}"{% if current %} aria-current="{{ current }}"{% endif %}>{{ item.label }}</a></li>
         {%- endfor %}
       </ul>
     </nav>

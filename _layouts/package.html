@@ -1,0 +1,148 @@
+---
+layout: default
+---
+{%- comment -%}
+  Landing page for one consulting package. All content comes from the
+  package file in _packages/.
+{%- endcomment -%}
+{%- assign s = page -%}
+{%- assign others = site.packages | where_exp: "p", "p.url != page.url" | sort: "order" -%}
+
+<section class="page-intro package-hero" aria-labelledby="page-title">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow"><a class="eyebrow__link" href="{{ '/services/' | relative_url }}">Consulting packages</a></p>
+      <h1 id="page-title">{{ s.title }}</h1>
+      <p class="lead">{{ s.tagline }}</p>
+      {% include cta.html enquiry=s.enquiry name=s.title %}
+    </div>
+    <div class="hero__offer">
+      <p class="eyebrow">At a glance</p>
+      <dl class="facts facts--compact">
+        <div><dt>Price</dt><dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
+        <div><dt>Time</dt><dd>{{ s.duration }} <span class="facts__note">{{ s.duration_note }}</span></dd></div>
+        <div><dt>Scope</dt><dd>{{ s.scope_short }}</dd></div>
+      </dl>
+      <p class="hero__offer-note">Contracted with and invoiced by {{ site.data.company.legal_name }}.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="for-title">
+  <div class="container split">
+    <div>
+      <h2 id="for-title">Who it's for</h2>
+      <p>{{ s.for }}</p>
+      <ul class="checklist" role="list">
+        {%- for a in s.audience %}
+        <li>{{ a }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 id="problem-title">The problem it solves</h2>
+      <p>{{ s.problem }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="approach-title">
+  <div class="container split">
+    <div>
+      <h2 id="approach-title">{{ s.approach_title }}</h2>
+      <ul class="checklist" role="list">
+        {%- for a in s.approach %}
+        <li>{{ a }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <h2 id="deliverables-title">What you get</h2>
+      <ul class="checklist" role="list">
+        {%- for d in s.deliverables %}
+        <li>{{ d }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="terms-title">
+  <div class="container">
+    <div class="offer offer--terms">
+      <div class="offer__main">
+        <h2 class="offer__title" id="terms-title">Scope, price and limits</h2>
+        <ul class="checklist" role="list">
+          {%- for item in s.scope %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+        {%- if s.limits %}
+        <p class="note"><strong>Limits.</strong> {{ s.limits }}</p>
+        {%- endif %}
+      </div>
+      <div class="offer__side">
+        <dl class="facts">
+          <div><dt>Price</dt><dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
+          <div><dt>Time</dt><dd>{{ s.duration }} <span class="facts__note">{{ s.duration_note }}</span></dd></div>
+        </dl>
+        <p class="facts__note">Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation. Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}.</p>
+        <h3 class="offer__subhead">Next step</h3>
+        <p>{{ s.next_step }}</p>
+        {% include cta.html enquiry=s.enquiry name=s.title %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="process-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="process-title">How it works</h2>
+    </div>
+    {% include process.html steps=s.process %}
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="evidence-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="evidence-title">Why work with me</h2>
+      <p>I've built AI systems in financial services and insurance, and I speak and write in public about evaluating LLMs and putting knowledge graphs to work. You can check all of it.</p>
+    </div>
+    {% include evidence.html %}
+  </div>
+</section>
+
+{%- if s.faq %}
+<section class="section" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="faq-title">Questions</h2>
+    </div>
+    <div class="faq">
+      {%- for f in s.faq %}
+      <details>
+        <summary>{{ f.q }}</summary>
+        <p>{{ f.a }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+{%- if others.size > 0 %}
+<section class="section section--surface" aria-labelledby="others-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="others-title">Other packages</h2>
+    </div>
+    <div class="cards cards--2">
+      {%- for o in others %}
+      {% include package-card.html package=o %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

@@ -473,6 +473,28 @@ main:focus {
   border-radius: var(--radius-lg);
 }
 
+.hero__audience {
+  max-width: 38em;
+  margin-top: calc(-1 * var(--space-1));
+  padding-left: var(--space-4);
+  border-left: var(--rule-accent) solid var(--color-teal);
+  color: var(--color-text-muted);
+}
+
+.hero__offer-note {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.eyebrow__link {
+  color: inherit;
+}
+
+.package-hero h1 {
+  max-width: 16em;
+}
+
 .hero__offer-title {
   margin-bottom: var(--space-4);
   font-size: var(--text-xl);
@@ -635,6 +657,10 @@ main:focus {
   border-left: var(--rule-accent) solid var(--color-teal);
 }
 
+.checklist + .note {
+  margin-top: var(--space-5);
+}
+
 .checklist li {
   position: relative;
   padding-left: 1.4rem;
@@ -687,9 +713,26 @@ main:focus {
 }
 
 @media (min-width: 48em) {
-  .cards--2 {
+  .cards--2,
+  .cards--3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+@media (min-width: 64em) {
+  .cards--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card__title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card__title-link:hover {
+  color: var(--color-link);
+  text-decoration-line: underline;
 }
 
 .card {
