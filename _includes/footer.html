@@ -12,7 +12,7 @@
       <li><a href="{{ p.github }}">GitHub</a></li>
     </ul>
     <div class="site-footer__legal">
-      <p>Consulting services are provided by {{ c.legal_name }}.</p>
+      <p>Consulting services are provided by {{ c.legal_name }}{% if c.vat_registered %}, a VAT-registered company{% endif %}.</p>
       {%- comment -%} Company particulars: only values set in _data/company.yml are shown. {%- endcomment -%}
       {%- assign particulars = "" | split: "" -%}
       {%- if c.registered_number != "" -%}

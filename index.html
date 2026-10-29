@@ -3,8 +3,8 @@ layout: default
 description: >-
   Samira Korani helps engineering teams evaluate RAG and agent systems,
   investigate unreliable outputs, and make better decisions about knowledge
-  graphs and production AI. Fixed-price packages for startups and scale-ups,
-  from Galway, Ireland.
+  graphs and production AI. Fixed-price packages for startups and mid-sized
+  businesses worldwide, from Galway, Ireland.
 person_schema: true
 ---
 {%- assign p = site.data.profile -%}
@@ -18,7 +18,7 @@ person_schema: true
       <p class="eyebrow">LLM evaluation and knowledge graph consulting</p>
       <h1 id="hero-title">Find out where your AI system fails and what to fix.</h1>
       <p class="lead">I help engineering teams evaluate RAG and agent systems, investigate unreliable outputs, and make better decisions about knowledge graphs and production AI.</p>
-      <p class="hero__audience">For Irish startups and scale-ups building AI features, especially in fintech and insurtech, and for teams already using Neo4j.</p>
+      <p class="hero__audience">{{ site.data.profile.audience }}</p>
       <div class="actions">
         {%- if p.booking_url != "" %}
         <a class="button" href="{{ p.booking_url | escape }}">Book a call</a>
@@ -32,7 +32,7 @@ person_schema: true
       <p class="eyebrow">Featured package</p>
       <h2 class="hero__offer-title" id="hero-offer-title">{{ featured.title }}</h2>
       <dl class="facts facts--compact">
-        <div><dt>Price</dt><dd>{{ featured.fee }} <span class="facts__note">{{ featured.fee_note }}</span></dd></div>
+        <div><dt>Price</dt><dd>{{ featured.fee }}{% include vat-suffix.html %} <span class="facts__note">{{ featured.fee_note }}</span></dd></div>
         <div><dt>Time</dt><dd>{{ featured.duration }} <span class="facts__note">{{ featured.duration_note }}</span></dd></div>
         <div><dt>Scope</dt><dd>{{ featured.scope_short }}</dd></div>
       </dl>
@@ -68,7 +68,7 @@ person_schema: true
     </div>
     {%- endif %}
 
-    <p class="terms-note">Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation. <a href="{{ '/services/' | relative_url }}">All packages</a></p>
+    <p class="terms-note">Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}. {% include vat-note.html %} <a href="{{ '/services/' | relative_url }}">All packages</a></p>
   </div>
 </section>
 
@@ -233,10 +233,11 @@ person_schema: true
       <h2 id="faq-title">Questions teams usually ask</h2>
     </div>
     <div class="faq">
+      {%- capture vat_note %}{% include vat-note.html %}{% endcapture %}
       {%- for f in site.data.faq %}
       <details>
         <summary>{{ f.q }}</summary>
-        <p>{{ f.a | replace: "[company]", site.data.company.legal_name }}</p>
+        <p>{{ f.a | replace: "[company]", site.data.company.legal_name | replace: "[vat]", vat_note }}</p>
       </details>
       {%- endfor %}
     </div>

@@ -19,7 +19,7 @@ layout: default
     <div class="hero__offer">
       <p class="eyebrow">At a glance</p>
       <dl class="facts facts--compact">
-        <div><dt>Price</dt><dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
+        <div><dt>Price</dt><dd>{{ s.fee }}{% include vat-suffix.html %} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
         <div><dt>Time</dt><dd>{{ s.duration }} <span class="facts__note">{{ s.duration_note }}</span></dd></div>
         <div><dt>Scope</dt><dd>{{ s.scope_short }}</dd></div>
       </dl>
@@ -83,10 +83,10 @@ layout: default
       </div>
       <div class="offer__side">
         <dl class="facts">
-          <div><dt>Price</dt><dd>{{ s.fee }} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
+          <div><dt>Price</dt><dd>{{ s.fee }}{% include vat-suffix.html %} <span class="facts__note">{{ s.fee_note }}</span></dd></div>
           <div><dt>Time</dt><dd>{{ s.duration }} <span class="facts__note">{{ s.duration_note }}</span></dd></div>
         </dl>
-        <p class="facts__note">Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation. Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}.</p>
+        <p class="facts__note">{% include vat-note.html %} Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}.</p>
         <h3 class="offer__subhead">Next step</h3>
         <p>{{ s.next_step }}</p>
         {% include cta.html enquiry=s.enquiry name=s.title %}

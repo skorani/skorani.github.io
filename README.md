@@ -73,7 +73,9 @@ GitHub Pages is set to **Deploy from a branch: `main`, `/ (root)`**. Anything me
 
 **Add the "Book a call" button.** Paste a real scheduling link (for example Cal.com or a Google Calendar appointment page) into `booking_url` in `_data/profile.yml`. Every package page and the contact section switch from email to "Book a call", with email kept as the second option.
 
-**Add the company's registered details.** In `_data/company.yml`, fill in `place_of_registration`, `registered_number`, `registered_office` and, only if VAT-registered, `vat_number`. Empty values stay off the site, so never type placeholder text there.
+**Add the company's registered details.** In `_data/company.yml`, fill in `place_of_registration`, `registered_number`, `registered_office` and `vat_number`. Empty values stay off the site, so never type placeholder text there. `vat_registered: true` adds "excl. VAT" to every price, the VAT sentence to the terms and "a VAT-registered company" to the footer.
+
+**Change who the site is for.** Edit `audience` in `_data/profile.yml`; it appears under the homepage and services headlines.
 
 **Add a project.** Copy an entry in `_data/projects.yml`. Describe only what the public code actually does, and link to it. A commented-out entry for the GraphRAG agent repository is ready to fill in once that repository has code.
 

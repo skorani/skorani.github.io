@@ -1,5 +1,6 @@
 # Homepage FAQs. Answers are plain text; keep them short.
-# [company] is replaced with legal_name from _data/company.yml.
+# [company] is replaced with legal_name from _data/company.yml, and [vat] with
+# the VAT sentence from _includes/vat-note.html.
 
 - q: What do you need from us for a Health Check?
   a: >-
@@ -27,6 +28,11 @@
     evaluates your workflow as it runs, so it doesn't depend on a particular
     framework or model provider.
 
+- q: Do you work with teams outside Ireland?
+  a: >-
+    Yes. I work remotely with startups and mid-sized businesses anywhere.
+    Calendly shows call times in your own time zone, and prices are in euro.
+
 - q: How do you handle confidential data?
   a: >-
     Access, data handling and confidentiality terms are agreed in writing as
@@ -37,5 +43,4 @@
   a: >-
     You work directly with me. Engagements are contracted with and invoiced by
     [company], the company through which I provide consulting
-    services. Fees are quoted in euro; applicable VAT and any third-party costs
-    are confirmed in the quotation.
+    services. [vat]

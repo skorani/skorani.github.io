@@ -16,7 +16,7 @@
   </div>
   <div class="offer__side">
     <dl class="facts">
-      <div><dt>Price</dt><dd>{{ pk.fee }} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
+      <div><dt>Price</dt><dd>{{ pk.fee }}{% include vat-suffix.html %} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
       <div><dt>Time</dt><dd>{{ pk.duration }} <span class="facts__note">{{ pk.duration_note }}</span></dd></div>
       <div>
         <dt>Scope</dt>

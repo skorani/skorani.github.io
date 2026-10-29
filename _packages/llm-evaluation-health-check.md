@@ -27,7 +27,7 @@ for: >-
   release, who are seeing answers they can't fully trust, or who need evidence
   before a model change, a launch or a customer's due-diligence questions.
 audience:
-  - Irish startups and scale-ups shipping AI features to customers
+  - Startups and mid-sized businesses shipping AI features to customers, wherever they are based
   - Fintech and insurtech teams, where answers must stay grounded in policy, product or regulatory documents
   - Teams about to change model, prompts or retrieval, who want a baseline first
 

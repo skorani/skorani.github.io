@@ -10,4 +10,9 @@ legal_name: MILEAWAY AI SYSTEMS LIMITED
 place_of_registration: ""   # for example: Ireland
 registered_number: ""       # CRO company number
 registered_office: ""       # full registered office address on one line
-vat_number: ""              # only if VAT-registered
+vat_number: ""              # add the VAT number here when you have it
+
+# true = the company is VAT-registered. Prices then show "excl. VAT", the
+# footer says the company is VAT-registered, and the terms explain that VAT
+# is added where applicable.
+vat_registered: true

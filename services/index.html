@@ -3,8 +3,8 @@ layout: default
 title: Consulting packages
 description: >-
   Fixed-price consulting packages from Samira Korani for LLM evaluation,
-  GraphRAG and knowledge graphs, for startups and scale-ups. Provided by
-  MILEAWAY AI SYSTEMS LIMITED.
+  GraphRAG and knowledge graphs, for startups and mid-sized businesses
+  worldwide. Provided by MILEAWAY AI SYSTEMS LIMITED.
 ---
 {%- assign packages = site.packages | sort: "order" -%}
 <section class="page-intro" aria-labelledby="page-title">
@@ -12,7 +12,7 @@ description: >-
     <p class="eyebrow">Services</p>
     <h1 id="page-title">Consulting packages</h1>
     <p class="lead">Fixed-price packages to find out what's wrong with an LLM system, decide whether a knowledge graph is worth it, or prove one on your own data. I do the work myself, from the first call to the handover.</p>
-    <p class="hero__audience">For Irish startups and scale-ups building AI features, especially in fintech and insurtech, and for teams already using Neo4j.</p>
+    <p class="hero__audience">{{ site.data.profile.audience }}</p>
   </div>
 </section>
 
@@ -46,7 +46,7 @@ description: >-
     </div>
     <ul class="checklist prose" role="list">
       <li>Engagements are contracted with and invoiced by {{ site.data.company.legal_name }}, the company through which I provide consulting services.</li>
-      <li>Prices are fixed for the agreed scope and quoted in euro. Applicable VAT and any third-party costs, such as model or cloud usage, are confirmed in the quotation.</li>
+      <li>Prices are fixed for the agreed scope. {% include vat-note.html %}</li>
       <li>Timelines start once access and scope are agreed in writing.</li>
       <li>Assessments report on the agreed sample and environment. They are not statistical guarantees, security audits or certifications.</li>
       <li>Work beyond a package is scoped and quoted separately.</li>

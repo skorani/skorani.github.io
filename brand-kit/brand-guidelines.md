@@ -53,7 +53,7 @@ Two names, two jobs:
 1. Write the company name exactly as registered: **MILEAWAY AI SYSTEMS LIMITED**. Do not shorten it to "Mileaway", "Mileaway AI" or an abbreviation.
 2. Never use the company name as a brand, wordmark or logo. There is no company logo; do not create one. Set it in normal running text.
 3. Keep the company name out of the website header, page titles, the social image and slide title areas.
-4. Where the company name appears in a commercial document, include its registered particulars: place of registration, registered number, registered office and, if registered, VAT number. Irish company rules generally require these particulars on a company's website and business documents. Confirm the exact list with your accountant.
+4. Where the company name appears in a commercial document, include its registered particulars: place of registration, registered number, registered office and VAT number (the company is VAT-registered). Irish company rules generally require these particulars on a company's website and business documents. Confirm the exact list with your accountant.
 5. The particulars below are placeholders for templates only. **Never publish placeholder text.** On the website, particulars are read from `_data/company.yml`, and empty values are left out.
 
 ### Sample email signature
@@ -67,7 +67,7 @@ linkedin.com/in/samirakorani · github.com/skorani
 Consulting services are provided by MILEAWAY AI SYSTEMS LIMITED.
 Registered in [PLACE OF REGISTRATION – TO CONFIRM], company number [CRO NUMBER – TO CONFIRM].
 Registered office: [REGISTERED OFFICE ADDRESS – TO CONFIRM].
-VAT number: [VAT NUMBER, ONLY IF REGISTERED – TO CONFIRM]
+VAT number: [VAT NUMBER – TO CONFIRM]
 ```
 
 Keep the first four lines for talks, community and recruiter emails. Add the legal block when sending proposals, quotations, invoices or anything contractual.
@@ -85,8 +85,8 @@ Prepared for:      [Client company], attention [Client contact]
 Consultant:        Samira Korani · samira.korani@gmail.com
 Service provider:  MILEAWAY AI SYSTEMS LIMITED
 Engagement:        LLM Evaluation Health Check
-Fee:               EUR 2,950, fixed for the scope below
-VAT:               [Rate, or "not applicable" – TO CONFIRM]
+Fee:               EUR 2,950 excl. VAT, fixed for the scope below
+VAT:               [Rate, or reverse charge / outside scope for business clients abroad – TO CONFIRM with accountant]
 Third-party costs: [e.g. model API usage, passed through at cost / paid directly by client – TO CONFIRM]
 ```
 
@@ -94,7 +94,7 @@ Third-party costs: [e.g. model API usage, passed through at cost / paid directly
 
 ```text
 MILEAWAY AI SYSTEMS LIMITED · Registered in [PLACE – TO CONFIRM] · Company number [CRO NUMBER – TO CONFIRM]
-Registered office: [ADDRESS – TO CONFIRM] · VAT number: [ONLY IF REGISTERED – TO CONFIRM]
+Registered office: [ADDRESS – TO CONFIRM] · VAT number: [VAT NUMBER – TO CONFIRM]
 Consultant: Samira Korani · samira.korani@gmail.com                                   Page [X] of [Y]
 ```
 

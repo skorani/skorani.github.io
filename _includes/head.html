@@ -48,9 +48,11 @@
     "description": {{ page.tagline | jsonify }},
     "url": {{ page.url | absolute_url | jsonify }},
     "serviceType": "Consulting",
+    "areaServed": "Worldwide",
     "provider": {"@type": "Organization", "name": {{ site.data.company.legal_name | jsonify }}}
     {%- if page.price_eur %},
-    "offers": {"@type": "Offer", "price": {{ page.price_eur | jsonify }}, "priceCurrency": "EUR"}
+    "offers": {"@type": "Offer", "price": {{ page.price_eur | jsonify }}, "priceCurrency": "EUR"{% if site.data.company.vat_registered %},
+      "priceSpecification": {"@type": "PriceSpecification", "price": {{ page.price_eur | jsonify }}, "priceCurrency": "EUR", "valueAddedTaxIncluded": false}{% endif %}}
     {%- elsif page.price_low %},
     "offers": {"@type": "AggregateOffer", "lowPrice": {{ page.price_low | jsonify }}, "highPrice": {{ page.price_high | jsonify }}, "priceCurrency": "EUR"}
     {%- endif %}

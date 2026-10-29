@@ -6,6 +6,12 @@ descriptor: Knowledge Graphs · GraphRAG · LLM Evaluation
 descriptor_title: Knowledge Graphs, GraphRAG and LLM Evaluation
 location: Galway, Ireland
 
+# Who the packages are for. Shown under the homepage and services headlines.
+audience: >-
+  For startups and mid-sized businesses anywhere in the world that are
+  building AI features, especially in fintech and insurtech, and for teams
+  already using Neo4j. I work remotely from Galway, Ireland.
+
 email: samira.korani@gmail.com
 linkedin: https://www.linkedin.com/in/samirakorani
 github: https://github.com/skorani

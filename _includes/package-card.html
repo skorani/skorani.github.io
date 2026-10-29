@@ -4,7 +4,7 @@
   <h3 class="card__title" id="card-{{ pk.anchor }}-title"><a class="card__title-link" href="{{ pk.url | relative_url }}">{{ pk.title }}</a></h3>
   <p>{{ pk.tagline }}</p>
   <dl class="facts facts--compact">
-    <div><dt>Price</dt><dd>{{ pk.fee }} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
+    <div><dt>Price</dt><dd>{{ pk.fee }}{% include vat-suffix.html %} <span class="facts__note">{{ pk.fee_note }}</span></dd></div>
     <div><dt>Time</dt><dd>{{ pk.duration }}</dd></div>
     <div><dt>Scope</dt><dd>{{ pk.scope_short }}</dd></div>
   </dl>
