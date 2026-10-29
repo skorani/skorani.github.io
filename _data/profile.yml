@@ -13,7 +13,7 @@ medium: https://medium.com/@SamiraKorani
 
 # Optional. Paste a real scheduling link (for example Cal.com or Calendly)
 # to add "Book a call" buttons. Leave empty to use email only.
-booking_url: ""
+booking_url: "https://calendly.com/samira-korani/30min"
 
 # Optional. Add a public CV link only when you want one on the site.
 cv_url: ""

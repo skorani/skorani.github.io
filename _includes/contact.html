@@ -4,8 +4,8 @@
   enquiry key, set automatically on package pages).
 {%- endcomment -%}
 {%- assign p = site.data.profile -%}
-{%- assign enquiry = include.enquiry | default: "health_check" -%}
-{%- assign enquiry_package = site.packages | where: "enquiry", enquiry | first -%}
+{%- assign contact_enquiry = include.enquiry | default: "health_check" -%}
+{%- assign enquiry_package = site.packages | where: "enquiry", contact_enquiry | first -%}
 {%- assign enquiry_name = enquiry_package.title | default: "Project enquiry" -%}
 <section class="contact inverse" id="contact" aria-labelledby="contact-title">
   <div class="container contact__inner">
@@ -16,17 +16,21 @@
       <p class="contact__lead">Tell me about the event or team, the audience and the date you have in mind. I'll reply to discuss the format and topic.</p>
       <div class="actions">
         <a class="button button--inverse" href="{% include mailto.html type="speaking" %}">Send a speaking enquiry</a>
-        <a class="button button--inverse-outline" href="{% include mailto.html type=enquiry %}">Discuss your project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
+        <a class="button button--inverse-outline" href="{% include mailto.html type=contact_enquiry %}">Discuss your project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
       </div>
       {%- else %}
       <h2 id="contact-title">Tell me about your system</h2>
+      {%- if p.booking_url != "" %}
+      <p class="contact__lead">Book a 30-minute call, or send a few lines about what you're building and what's going wrong.</p>
+      {%- else %}
       <p class="contact__lead">Send a few lines about what you're building and what's going wrong. I'll reply to arrange a short discovery call.</p>
+      {%- endif %}
       <div class="actions">
         {%- if p.booking_url != "" %}
         <a class="button button--inverse" href="{{ p.booking_url | escape }}">Book a call</a>
-        <a class="button button--inverse-outline" href="{% include mailto.html type=enquiry %}">Email me about a project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
+        <a class="button button--inverse-outline" href="{% include mailto.html type=contact_enquiry %}">Email me about a project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
         {%- else %}
-        <a class="button button--inverse" href="{% include mailto.html type=enquiry %}">Discuss your project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
+        <a class="button button--inverse" href="{% include mailto.html type=contact_enquiry %}">Discuss your project<span class="visually-hidden">: {{ enquiry_name }}</span></a>
         {%- endif %}
         <a class="button button--inverse-outline" href="{% include mailto.html type="speaking" %}">Speaking or workshop enquiry</a>
       </div>

@@ -144,6 +144,8 @@ with sync_playwright() as p:
         u = urllib.parse.urlparse(h)
         if u.path != EMAIL: fail(f"mailto to wrong address {h}")
         q = urllib.parse.parse_qs(u.query, keep_blank_values=True)
+        plain = name.split("\n")[0] in (EMAIL, "Open in your email app")
+        if not plain and "subject" not in q: fail(f"{path}: '{name.splitlines()[0]}' email link has no subject")
         subjects.setdefault(q.get("subject", ["(none)"])[0], set()).add(name.split("\n")[0])
     for s, names in subjects.items(): info(f"mailto subject '{s}' <- {sorted(names)}")
 
