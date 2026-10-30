@@ -1,0 +1,221 @@
+---
+layout: default
+title: "A relevant answer can still be wrong: what a RAG evaluation actually finds"
+description: >-
+  An offline RAG evaluation on public FEMA flood-insurance guidance: baseline
+  7 of 14 checks passed, candidate 10 of 14. What improved, and what still
+  fails.
+date: 2026-10-30
+article_schema: true
+---
+{%- assign pkg = site.packages | where: "anchor", "health-check" | first -%}
+<section class="page-intro" aria-labelledby="page-title">
+  <div class="container">
+    <p class="eyebrow">Evaluation Health Check · Sample report</p>
+    <h1 id="page-title">A relevant answer can still be wrong: what a RAG evaluation actually finds</h1>
+    <p class="lead">A relevant passage is not the same as a correct answer. This is an offline evaluation of a RAG system&rsquo;s evidence selection and abstention behaviour, run against public flood-insurance guidance from FEMA&rsquo;s National Flood Insurance Program (NFIP).</p>
+    <p>The revised retriever passes more checks than the baseline, but it still misses a policy exception, and the full picture only shows up once you trace the score back to an actual response. Further review is needed before relying on these response decisions.</p>
+    <p class="muted">30 October 2026 &middot; Samira Korani &middot; Public-data demo, not a client case study</p>
+  </div>
+</section>
+
+<section class="section section--surface section--flush-top" aria-labelledby="result-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Result</p>
+      <h2 id="result-title">More checks passed, four still fail</h2>
+      <p>The candidate retriever passed 10 of 14 reserved assessment checks. Four checks still fail: one evidence, one abstention and two routing.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat">
+        <p class="stat__value">7&nbsp;/&nbsp;14</p>
+        <p class="stat__label">Baseline passes</p>
+        <p class="stat__note">50.0% of assessment checks</p>
+      </div>
+      <div class="stat stat--accent">
+        <p class="stat__value">10&nbsp;/&nbsp;14</p>
+        <p class="stat__label">Candidate passes</p>
+        <p class="stat__note">71.4% of assessment checks</p>
+      </div>
+      <div class="stat">
+        <p class="stat__value">4</p>
+        <p class="stat__label">Checks still fail</p>
+        <p class="stat__note">1 evidence, 1 abstention, 2 routing</p>
+      </div>
+    </div>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <caption class="visually-hidden">Baseline versus candidate pass rate, by measured behaviour</caption>
+        <thead>
+          <tr>
+            <th scope="col">Measured behaviour</th>
+            <th scope="col">Baseline</th>
+            <th scope="col">Candidate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Expected passage selected<br><span class="muted">Answerable questions</span></th>
+            <td>7 / 11</td>
+            <td>9 / 11</td>
+          </tr>
+          <tr>
+            <th scope="row">Explicit abstention<br><span class="muted">Insufficient-evidence questions</span></th>
+            <td>0 / 3</td>
+            <td>1 / 3</td>
+          </tr>
+          <tr>
+            <th scope="row">Combined evidence / routing contract</th>
+            <td>7 / 14</td>
+            <td>10 / 14</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Three additional checks passed between baseline and candidate. Vocabulary handling and a relevance gate help, but the mortgage exception is still missed, and the gate rejects one answerable car-coverage question. Two personal-data questions do not enter the required abstention state.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="checks-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Evidence</p>
+      <h2 id="checks-title">Three checks worth reading</h2>
+      <p>A pass rate like 10/14 only means something once you trace it back to an actual response. Here are three.</p>
+    </div>
+
+    <div class="cards cards--3">
+      <article class="card" aria-labelledby="a07-title">
+        <p class="card__kind card__kind--status">A07 &middot; Wrong evidence &middot; Unresolved</p>
+        <h3 class="card__title" id="a07-title">The exception loses to the default</h3>
+        <p><strong>Question:</strong> Do I need to wait thirty days if I buy cover while taking out a mortgage?</p>
+        <p>The candidate (passage P05) returns the normal thirty-day waiting period. The expected passage (P06) is that the mortgage-linked purchase exception has no waiting period <a href="#s1" aria-label="Source 1: Buying flood insurance, FEMA slash NFIP">[S1]</a>.</p>
+        <p class="status">Next action: test exception-first retrieval using new default-versus-exception contrast cases.</p>
+      </article>
+
+      <article class="card" aria-labelledby="a03-title">
+        <p class="card__kind card__kind--status">A03 &middot; Improved evidence selection</p>
+        <h3 class="card__title" id="a03-title">Hotel costs reach the correct exclusion</h3>
+        <p><strong>Question:</strong> Will flood insurance pay the hotel bill while my house is repaired?</p>
+        <p>The baseline (P10) returns instructions to report a claim. The candidate (P04) selects the exclusion for temporary accommodation during repairs <a href="#s1" aria-label="Source 1: Buying flood insurance, FEMA slash NFIP">[S1]</a>.</p>
+        <p class="status">Next action: keep this as a regression check; source citations alone would not catch the old mismatch.</p>
+      </article>
+
+      <article class="card" aria-labelledby="a04-title">
+        <p class="card__kind card__kind--status">A04 &middot; False abstention &middot; Unresolved</p>
+        <h3 class="card__title" id="a04-title">The relevance gate blocks an answer</h3>
+        <p><strong>Question:</strong> Does this flood cover include my car?</p>
+        <p>The candidate abstains: its evidence score of 0.1694 is below the configured 0.18 threshold. The expected passage (P04) is to retrieve the car exclusion from the supplied guidance <a href="#s1" aria-label="Source 1: Buying flood insurance, FEMA slash NFIP">[S1]</a>.</p>
+        <p class="status">Next action: calibrate the answer-versus-abstain trade-off on a separate labelled set.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="next-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Prioritised work</p>
+      <h2 id="next-title">What to change next</h2>
+      <p>In order of impact, based on the checks that still fail.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table class="data-table">
+        <caption class="visually-hidden">Prioritised changes and their acceptance checks</caption>
+        <thead>
+          <tr>
+            <th scope="col">Priority</th>
+            <th scope="col">Proposed change</th>
+            <th scope="col">Acceptance check</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">P0</th>
+            <td>Retrieve and compare relevant exceptions before selecting a general rule.</td>
+            <td>New paired questions select the correct default or exception.</td>
+          </tr>
+          <tr>
+            <th scope="row">P0</th>
+            <td>Define explicit answerability routing and acceptable qualified refusals.</td>
+            <td>Review A12/A13 with a domain owner; decide the intended response contract.</td>
+          </tr>
+          <tr>
+            <th scope="row">P1</th>
+            <td>Calibrate the relevance gate across short questions and paraphrases.</td>
+            <td>Measure missed answers and unsupported routing on a fresh set.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="method-title">
+  <div class="container">
+    <div class="section__header prose">
+      <p class="eyebrow">Method and limits</p>
+      <h2 id="method-title">How this was measured, and where it falls short</h2>
+    </div>
+
+    <div class="prose">
+      <p>Baseline: word-count cosine retrieval. Candidate: word and character TF&#8209;IDF, vocabulary expansions, topic bonuses and a 0.18 relevance gate. Both use the same 18 passages and return the selected text.</p>
+
+      <p>A pass means the authored expected passage was selected, or the explicit abstention state was used where required. This does not measure generative answer correctness, hallucinations, model cost or production latency.</p>
+
+      <p>The questions, evidence labels and scoring design were drafted with AI assistance and prepared by the same author. Inputs were hash-locked before the first run, and no configuration changed after the assessment result. The reserved set is not an independent blind benchmark, and no domain expert has validated the labels.</p>
+
+      <p><strong>Rubric nuance.</strong> Check A13 returns a passage that already states an individual settlement cannot be calculated. Its failure is the missing explicit abstention state, not an invented payout. A domain review might accept that qualified response; the 10/14 result is specific to this strict routing rubric.</p>
+
+      <div class="callout">
+        <p class="eyebrow">Scope of this sample</p>
+        <p>20 authored questions: 6 development and 14 reserved assessment checks. 18 paraphrased passages drawn from 4 public pages. Extractive responses only &mdash; no hosted LLM was called. This is not a client case study.</p>
+        <p>The accompanying pack contains the source map, all 20 cases, frozen settings, raw outputs, CSV results and the runner. <!-- TODO: add reproducibility pack link --> Public US guidance is used only as an evaluation fixture; no personal coverage decision is made.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="sources-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Source trace</p>
+      <h2 id="sources-title">Sources</h2>
+    </div>
+    <ul class="checklist prose" role="list">
+      <li id="s1">[S1] <a href="https://www.floodsmart.gov/get-insured/buy-a-policy">Buying flood insurance</a> &ndash; FEMA / NFIP, accessed 30 October 2026.</li>
+      <li id="s2">[S2] <a href="https://www.floodsmart.gov/recover/start-a-claim">Starting a flood insurance claim</a> &ndash; FEMA / NFIP, accessed 30 October 2026.</li>
+      <li id="s3">[S3] <a href="https://www.floodsmart.gov/know-your-risk/what-is-a-flood">What is a flood?</a> &ndash; FEMA / NFIP, accessed 30 October 2026.</li>
+      <li id="s4">[S4] <a href="https://www.floodsmart.gov/definitions">NFIP glossary</a> &ndash; FEMA / NFIP, accessed 30 October 2026.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="download-title">
+  <div class="container">
+    <div class="section__header">
+      <h2 id="download-title">Read the full sample report</h2>
+      <p>Three pages: the decision, the evidence behind it, and the prioritised work. Same facts and figures as this page.</p>
+    </div>
+    <div class="actions">
+      <a class="button" href="{{ '/assets/samples/mileaway-rag-evaluation-sample.pdf' | relative_url }}" download>Download the full sample report (PDF, ~80 KB)</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Your workflow</p>
+      <h2 id="cta-title">See this level of detail for your own workflow</h2>
+      <p>The Evaluation Health Check runs this kind of baseline-versus-candidate assessment against one of your own RAG or agent workflows, with up to 50 agreed test cases.</p>
+    </div>
+    <div class="actions">
+      <a class="button" href="{{ pkg.url | relative_url }}">See the Evaluation Health Check</a>
+    </div>
+  </div>
+</section>

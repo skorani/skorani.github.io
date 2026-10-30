@@ -15,6 +15,9 @@ layout: default
       <h1 id="page-title">{{ s.title }}</h1>
       <p class="lead">{{ s.tagline }}</p>
       {% include cta.html enquiry=s.enquiry name=s.title %}
+      {%- if s.sample_url %}
+      <p class="more-link"><a class="arrow-link" href="{{ s.sample_url | relative_url }}">See a sample report<span class="visually-hidden">: {{ s.title }}</span></a></p>
+      {%- endif %}
     </div>
     <div class="hero__offer">
       <p class="eyebrow">At a glance</p>

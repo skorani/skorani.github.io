@@ -2,6 +2,11 @@
 # `home: true` shows the article on the homepage (keep it to three).
 
 articles:
+  - title: "A relevant answer can still be wrong: what a RAG evaluation actually finds"
+    date: 2026-10-30
+    url: /samples/rag-evaluation/
+    summary: A sample Evaluation Health Check on public FEMA/NFIP flood-insurance guidance, baseline 7/14 checks passed versus candidate 10/14, and what the remaining failures show about evidence selection and abstention.
+    topic: LLM evaluation
   - title: Evaluating a Fine-Tuned LLM Using a Knowledge Graph and Ground Truth Data
     date: 2025-05-07
     url: https://medium.com/@SamiraKorani/evaluating-a-fine-tuned-llm-using-a-knowledge-graph-and-ground-truth-data-a4fac84516e7
