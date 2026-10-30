@@ -31,5 +31,8 @@
     </dl>
     {% include cta.html enquiry=pk.enquiry name=pk.title %}
     <p class="more-link"><a class="arrow-link" href="{{ pk.url | relative_url }}">Full package details<span class="visually-hidden">: {{ pk.title }}</span></a></p>
+    {%- if pk.sample_url %}
+    <p class="more-link"><a class="arrow-link" href="{{ pk.sample_url | relative_url }}">See a sample report<span class="visually-hidden">: {{ pk.title }}</span></a></p>
+    {%- endif %}
   </div>
 </article>

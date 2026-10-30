@@ -7,6 +7,7 @@ featured: true
 order: 1
 anchor: health-check
 enquiry: health_check   # key under `enquiries` in _data/profile.yml
+sample_url: /samples/rag-evaluation/   # public sample report; see the full page in /samples/rag-evaluation/
 
 title: LLM Evaluation Health Check
 description: >-

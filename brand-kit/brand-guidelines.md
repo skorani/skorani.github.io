@@ -333,6 +333,7 @@ brand-kit/
     favicon.svg                16 px-tuned tile
     favicon.ico                16, 32 and 48 px
     favicon-{16,32,48}.png, apple-touch-icon.png, symbol-tile-512.png
+    avatar-1024.png            square avatar for Medium, LinkedIn or GitHub (crops cleanly to a circle)
     wordmark-name-{light,dark-bg,mono-ink,mono-white}.svg
     wordmark-descriptor-{light,dark-bg,mono-ink,mono-white}.svg
     lockup-{light,dark-bg,mono-ink,mono-white}.svg

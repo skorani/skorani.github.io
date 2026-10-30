@@ -59,6 +59,22 @@
   }
   </script>
   {%- endif %}
+  {%- if page.article_schema %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page_description | jsonify }},
+    "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    "dateModified": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "image": {{ '/brand-kit/social/og-image.png' | absolute_url | jsonify }},
+    "author": {"@type": "Person", "name": {{ p.name | jsonify }}, "url": {{ '/' | absolute_url | jsonify }}},
+    "publisher": {"@type": "Organization", "name": {{ site.data.company.legal_name | jsonify }}}
+  }
+  </script>
+  {%- endif %}
   {%- if page.person_schema %}
   <script type="application/ld+json">
   {
@@ -77,7 +93,8 @@
     "knowsAbout": ["Knowledge graphs", "GraphRAG", "LLM evaluation"],
     "sameAs": [
       {{ p.github | jsonify }},
-      {{ p.linkedin | jsonify }}
+      {{ p.linkedin | jsonify }},
+      {{ p.medium | jsonify }}
     ]
   }
   </script>

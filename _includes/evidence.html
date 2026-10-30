@@ -1,5 +1,6 @@
 {%- comment -%} Evidence strip: public, checkable work. Param: heading_id. {%- endcomment -%}
 {%- assign talks = site.data.talks -%}
+{%- assign latest_article = site.data.writing.articles[0] -%}
 <ul class="evidence" role="list">
   <li class="evidence__item">
     <p class="evidence__label">Speaker, NODES 2025</p>
@@ -13,8 +14,8 @@
   </li>
   <li class="evidence__item">
     <p class="evidence__label">Writing</p>
-    <p class="evidence__title">{{ site.data.writing.articles[0].title }}</p>
-    <a href="{{ site.data.writing.articles[0].url | escape }}">Read the article<span class="visually-hidden"> on Medium</span></a>
+    <p class="evidence__title">{{ latest_article.title }}</p>
+    <a href="{{ latest_article.url | escape }}">Read the article{% if latest_article.url contains "medium.com" %}<span class="visually-hidden"> on Medium</span>{% endif %}</a>
   </li>
   <li class="evidence__item">
     <p class="evidence__label">Experience</p>

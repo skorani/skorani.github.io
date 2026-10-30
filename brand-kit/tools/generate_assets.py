@@ -247,6 +247,8 @@ def main():
         render(files["symbol-tile.svg"], 48, 48, LOGO / "favicon-48.png")
         render(svg_doc(32, 32, symbol_tile(square=True), "Samira Korani"), 180, 180, LOGO / "apple-touch-icon.png")
         render(files["symbol-tile.svg"], 512, 512, LOGO / "symbol-tile-512.png")
+        # Square, full-bleed avatar for Medium, LinkedIn or GitHub (they crop to a circle)
+        render(svg_doc(32, 32, symbol_tile(square=True), "Samira Korani"), 1024, 1024, LOGO / "avatar-1024.png")
         render(files["lockup-light.svg"], round(lock_w * 1.5), round(stack_h * 1.5), LOGO / "lockup-light@2x.png", scale=2)
         render(files["lockup-dark-bg.svg"], round(lock_w * 1.5), round(stack_h * 1.5), LOGO / "lockup-dark-bg@2x.png", scale=2)
 
