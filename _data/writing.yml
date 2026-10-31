@@ -2,7 +2,7 @@
 # `home: true` shows the article on the homepage (keep it to three).
 
 articles:
-  - title: "Behind the Retweets: Who Amplifies Iran's Opposition"
+  - title: "Behind the Retweets: Who Amplifies Iran’s Opposition?"
     date: 2026-10-31
     url: https://medium.com/@SamiraKorani/behind-the-retweets-who-amplifies-irans-opposition-ac8e020ccaaf
     summary: A network analysis of forty-nine X accounts and their retweets, built in a graph database to trace which sources opposition-aligned accounts amplify and how unevenly that sharing is distributed.
