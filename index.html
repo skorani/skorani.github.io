@@ -15,6 +15,7 @@ person_schema: true
 <section class="hero" aria-labelledby="hero-title">
   <div class="container hero__grid">
     <div class="hero__text">
+      <p class="availability"><span class="availability__dot" aria-hidden="true"></span>Open to senior ML / AI engineering roles &middot; <a href="{% include mailto.html type="employment" %}">Get in touch</a></p>
       <p class="eyebrow">LLM evaluation and knowledge graph consulting</p>
       <h1 id="hero-title">Find out where your AI system fails and what to fix.</h1>
       <p class="lead">I help engineering teams evaluate RAG and agent systems, investigate unreliable outputs, and make better decisions about knowledge graphs and production AI.</p>
@@ -37,6 +38,51 @@ person_schema: true
         <div><dt>Scope</dt><dd>{{ featured.scope_short }}</dd></div>
       </dl>
       <a class="arrow-link" href="{{ featured.url | relative_url }}">What's included<span class="visually-hidden"> in the {{ featured.title }}</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface" id="featured-project" aria-labelledby="featured-project-title">
+  <div class="container">
+    <div class="section__header">
+      <p class="eyebrow">Featured project</p>
+      <h2 id="featured-project-title">GraphRAG agent over an RDF knowledge graph</h2>
+      <p>An agent that answers questions over an RDF knowledge graph using SPARQL, with cited, evidence-checked answers rather than guesses.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat stat--accent">
+        <p class="stat__value">95.0%</p>
+        <p class="stat__label">SPARQL execution accuracy</p>
+      </div>
+      <div class="stat stat--accent">
+        <p class="stat__value">95.4%</p>
+        <p class="stat__label">Answer correctness</p>
+      </div>
+      <div class="stat stat--accent">
+        <p class="stat__value">100%</p>
+        <p class="stat__label">Groundedness</p>
+        <p class="stat__note">Rule planner, template answers &middot; baseline on 43 hand-checked questions across 8 categories.</p>
+      </div>
+    </div>
+
+    <pre class="demo-transcript"><code><span class="demo-transcript__prompt">$</span> graphrag ask "Does Harbourlight Theatre have a hearing loop?"
+<span class="demo-transcript__prompt">$</span> graphrag ask "Where is the nearest hospital to the Fernquay Hotel?"
+<span class="demo-transcript__prompt">$</span> graphrag ask "Which events on 14 November are at step-free venues within 1 km of Eyre Square?" --show-sparql</code></pre>
+
+    <p>Entity linking matches names in the question to graph IRIs; a rule-based planner (with an optional LLM text-to-SPARQL planner and a repair loop) writes the query; execution is read-only and capped; results become cited evidence; and a grounding check verifies every entity, number and citation in the answer before it's returned &mdash; falling back to a template answer otherwise. An MCP server exposes the graph as tools for Claude Desktop, Claude Code and other MCP-compatible agents.</p>
+
+    <ul class="tags" role="list" aria-label="Technologies">
+      <li>Python</li>
+      <li>RDF</li>
+      <li>SPARQL</li>
+      <li>GraphRAG</li>
+      <li>MCP</li>
+    </ul>
+
+    <div class="actions">
+      <a class="button" href="https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-">View the code on GitHub</a>
+      <a class="button button--secondary" href="https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-#readme">Read the README</a>
     </div>
   </div>
 </section>
