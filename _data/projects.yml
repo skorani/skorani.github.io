@@ -63,14 +63,18 @@
     - label: NER dataset
       url: https://github.com/OverFlowData/NER-
 
-# When the GraphRAG agent repository has code and a README, describe what it
-# actually does and uncomment:
-# - id: graphrag-rdf
-#   title: GraphRAG agent over an RDF knowledge graph
-#   kind: Open-source demonstration
-#   summary: >-
-#     (Describe the implemented features here.)
-#   tags: [GraphRAG, RDF, Agents]
-#   links:
-#     - label: View the code on GitHub
-#       url: https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-
+- id: graphrag-rdf
+  title: GraphRAG agent over an RDF knowledge graph
+  kind: Open-source demonstration
+  summary: >-
+    An agent that answers questions over an RDF knowledge graph with SPARQL,
+    citing its evidence and checking its own answers against that evidence
+    before returning them. Includes a rule-based planner, an optional LLM
+    planner with a repair loop, an MCP server for Claude Desktop and Claude
+    Code, and an evaluation suite that CI gates every change against.
+  tags: [Python, RDF, SPARQL, GraphRAG, MCP]
+  links:
+    - label: View the code on GitHub
+      url: https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-
+    - label: Read the README
+      url: https://github.com/skorani/GraphRAG-Agent-over-RDF-Knowledge-Graph-#readme
