@@ -2,6 +2,11 @@
 # `home: true` shows the article on the homepage (keep it to three).
 
 articles:
+  - title: "Every Edge Has a Page Number: Building a Legal Knowledge Graph You Can Audit"
+    date: 2026-11-03
+    url: https://medium.com/@SamiraKorani/every-edge-has-a-page-number-building-a-legal-knowledge-graph-you-can-audit-57686c3dc20b
+    summary: A legal knowledge graph that draws only the edges a source document supports, each one labelled with the page it came from, so a reviewer can check every clause, conflict and unsupported extraction against the original PDF.
+    topic: Knowledge graphs
   - title: "Behind the Retweets: Who Amplifies Iran’s Opposition?"
     date: 2026-10-31
     url: https://medium.com/@SamiraKorani/behind-the-retweets-who-amplifies-irans-opposition-ac8e020ccaaf
